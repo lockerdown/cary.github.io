@@ -74,6 +74,6 @@ archive_generator:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:git
-  repository:https://github.com/yangyichen/my-blog.git
-  barnch:master
+  type: git
+  repository: git@github.com:yangyichen/yangyichen.github.io.git
+  barnch: master
