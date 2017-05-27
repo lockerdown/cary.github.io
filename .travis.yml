@@ -5,7 +5,7 @@ node_js:
   - "6"  # nodejs的版本
 branches:
   only:
-  - master  # 设置自动化部署的分支
+  - hexo  # 设置自动化部署的分支
 before_install:
 - export TZ='Asia/Shanghai'  # 设置时区
 - npm install -g hexo
