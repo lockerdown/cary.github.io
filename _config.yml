@@ -76,4 +76,4 @@ archive_generator:
 deploy:
   type: git
   repository: git@github.com:yangyichen/yangyichen.github.io.git
-  barnch: hexo
+  barnch: master
