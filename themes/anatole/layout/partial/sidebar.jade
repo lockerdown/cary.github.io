@@ -9,10 +9,10 @@
           p= theme.description
 
   ul.social-links
-    if theme.douban
+    if theme.github
       li
-        a(href="https://douban.com/people" + theme.douban)
-          i.i-douban
+        a(href="https://github.com/" + theme.github)
+          i.fa.fa-github
     if theme.mail
       li
         a(href="mailto:" + theme.mail)
@@ -25,12 +25,4 @@
       li
         a(href= url_for(theme.rss))
           i.fa.fa-rss
-    if theme.weibo
-      li
-        a(href="http://weibo.com/" + theme.weibo)
-          i.fa.fa-weibo
-    if theme.github
-      li
-        a(href="http://github.com/" + theme.github)
-          i.fa.fa-github
   include footer
