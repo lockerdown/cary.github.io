@@ -8,3 +8,4 @@
 /npm-debug.log
 
 /publish
+*node_modules/

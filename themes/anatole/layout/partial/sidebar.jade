@@ -9,10 +9,14 @@
           p= theme.description
 
   ul.social-links
-    if theme.twitter
+    if theme.douban
       li
-        a(href="https://twitter.com/" + theme.twitter)
-          i.fa.fa-twitter
+        a(href="https://douban.com/people" + theme.douban)
+          i.i-douban
+    if theme.mail
+      li
+        a(href="mailto:" + theme.mail)
+          i.fa.fa-envelope-o
     if theme.instagram
       li
         a(href="http://instagram.com/" + theme.instagram)
@@ -25,10 +29,6 @@
       li
         a(href="http://weibo.com/" + theme.weibo)
           i.fa.fa-weibo
-    if theme.facebook
-      li
-        a(href="http://facebook.com/" + theme.facebook)
-          i.fa.fa-facebook
     if theme.github
       li
         a(href="http://github.com/" + theme.github)
