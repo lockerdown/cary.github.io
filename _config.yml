@@ -3,9 +3,9 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Cary
-subtitle:
-description: 黑胖子的博客
+title: 黑胖子的博客
+subtitle: Cary
+description: 技术、吐槽、随笔
 author: Cary Yang
 language: zh-CN
 timezone: Asia/Shanghai
