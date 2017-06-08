@@ -1,7 +1,7 @@
 
 
 language: node_js
-cache: yarn
+cache: bundler
 node_js:
   - "6"  # nodejs的版本
 branches:
@@ -26,7 +26,7 @@ before_install:
 - cp .travis/ssh_config ~/.ssh/config
 # 设置github账户信息
 - git config --global user.name "caryyang" #设置github用户名
-- git config --global user.email "cary_yang@hotmail.com" #设置github用户邮箱
+- git config --global user.email "carynihility@gmail.com" #设置github用户邮箱
 # 安装依赖组件
 install:
 - npm install
