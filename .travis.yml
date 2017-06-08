@@ -1,7 +1,7 @@
 
 
 language: node_js
-cache: bundler
+# cache: bundler
 node_js:
   - "6"  # nodejs的版本
 branches:
