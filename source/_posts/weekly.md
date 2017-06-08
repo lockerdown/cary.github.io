@@ -1,7 +1,7 @@
 ---
 title: weekly
 date: 2017-05-27 10:21:51
-tags:
+tags: weekly
 ---
 ### 本周已完成任务
 
@@ -53,12 +53,12 @@ var editableRow = {
         }
     },
     template: `
-        <div ref="content" :title="value" :class="{'active':editableIndex,'line-clamp-2':!editableIndex}" 
-            :contenteditable="editableIndex?true:false" 
-            @input="filterComment($event.target.innerText)" 
-            @dblclick="editCase()" 
-            @blur="saveCase(id,keyname)" 
-            @keydown="stopEnter($event.key)" 
+        <div ref="content" :title="value" :class="{'active':editableIndex,'line-clamp-2':!editableIndex}"
+            :contenteditable="editableIndex?true:false"
+            @input="filterComment($event.target.innerText)"
+            @dblclick="editCase()"
+            @blur="saveCase(id,keyname)"
+            @keydown="stopEnter($event.key)"
             :data-text="placeholder"
             v-text="value">
         </div>`,
