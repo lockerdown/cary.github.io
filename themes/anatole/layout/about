@@ -1,0 +1,13 @@
+extends partial/layout
+
+block site_title
+    != page.title + " · " + config.title
+
+block content
+  p.
+     Jade is a terse and simplae
+     templating language with a
+     strong focus on performance
+     and powerful features.
+  h1
+    this is for test.

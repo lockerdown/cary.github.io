@@ -2,12 +2,12 @@
   .nav
     li
       if is_home()
-        a.current(href="/")= __('Home')					
+        a.current(href="/")= __('Home')
       else
-        a(href="/")= __('Home')	
+        a(href="/")= __('Home')
     li
       if is_current('about')
-        a.current(href="/about")= __('About')			
+        a.current(href="/about")= __('About')
       else
         a(href="/about")= __('About')
     li
@@ -15,17 +15,12 @@
         a.current(href="/archives")= __('Archive')
       else
         a(href="/archives")= __('Archive')
-    li
-      if is_current('links')
-        a.current(href="/links")= __('Links')					
-      else
-        a(href="/links")= __('Links')		
   .information
     .back_btn
       li
         if is_post()
-          a.fa.fa-chevron-left(onclick="window.history.go(-1)") 
+          a.fa.fa-chevron-left(onclick="window.history.go(-1)")
         else
-          a.fa.fa-chevron-left(onclick="window.history.go(-1)",style="display:none;") 
+          a.fa.fa-chevron-left(onclick="window.history.go(-1)",style="display:none;")
     .avatar
       img(src=theme.avatar)
