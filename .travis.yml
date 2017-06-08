@@ -1,35 +1,35 @@
 
 
 language: node_js
+cache: yarn
 node_js:
-  - "6"  # nodejsµÄ°æ±¾
+  - "6"  # nodejsçš„ç‰ˆæœ¬
 branches:
   only:
-  - hexo  # ÉèÖÃ×Ô¶¯»¯²¿ÊğµÄ·ÖÖ§
+  - hexo  # è®¾ç½®è‡ªåŠ¨åŒ–éƒ¨ç½²çš„åˆ†æ”¯
 before_install:
-- export TZ='Asia/Shanghai'  # ÉèÖÃÊ±Çø
+- export TZ='Asia/Shanghai'  # è®¾ç½®æ—¶åŒº
 - npm install -g hexo
 - npm install -g hexo-cli
-# ½«xxxxxxxxxxxÌæ»»ÉÏÃæÉú³ÉµÄÄÚÈİ
-# ÕâÀïÃæµÄÎÄ¼şÂ·¾¶¿É¸ù¾İ×Ô¼ºµÄÇé¿ö½øĞĞĞŞ¸Ä
-# ½âÃÜid_rsa_blog.enc Êä³öµ½.ssh/ÎÄ¼ş¼ĞÏÂ£¬ÃüÃûÎªid_rsa
+# å°†xxxxxxxxxxxæ›¿æ¢ä¸Šé¢ç”Ÿæˆçš„å†…å®¹
+# è¿™é‡Œé¢çš„æ–‡ä»¶è·¯å¾„å¯æ ¹æ®è‡ªå·±çš„æƒ…å†µè¿›è¡Œä¿®æ”¹
+# è§£å¯†id_rsa_blog.enc è¾“å‡ºåˆ°.ssh/æ–‡ä»¶å¤¹ä¸‹ï¼Œå‘½åä¸ºid_rsa
 - openssl aes-256-cbc -K $encrypted_b69137d15df0_key -iv $encrypted_b69137d15df0_iv
   -in .travis/id_rsa_blog.enc -out ~/.ssh/id_rsa -d
 
-# ÉèÖÃid_rsaÎÄ¼şÈ¨ÏŞ
+# è®¾ç½®id_rsaæ–‡ä»¶æƒé™
 - chmod 600 ~/.ssh/id_rsa
-# Ìí¼ÓsshÃÜÔ¿
+# æ·»åŠ sshå¯†é’¥
 - eval $(ssh-agent)
 - ssh-add ~/.ssh/id_rsa
-# Ìí¼ÓsshÅäÖÃÎÄ¼ş
+# æ·»åŠ sshé…ç½®æ–‡ä»¶
 - cp .travis/ssh_config ~/.ssh/config
-# ÉèÖÃgithubÕË»§ĞÅÏ¢
-- git config --global user.name "caryyang" #ÉèÖÃgithubÓÃ»§Ãû
-- git config --global user.email "cary_yang@hotmail.com" #ÉèÖÃgithubÓÃ»§ÓÊÏä
-# °²×°ÒÀÀµ×é¼ş
+# è®¾ç½®githubè´¦æˆ·ä¿¡æ¯
+- git config --global user.name "caryyang" #è®¾ç½®githubç”¨æˆ·å
+- git config --global user.email "cary_yang@hotmail.com" #è®¾ç½®githubç”¨æˆ·é‚®ç®±
+# å®‰è£…ä¾èµ–ç»„ä»¶
 install:
 - npm install
-# Ö´ĞĞµÄÃüÁî
+# æ‰§è¡Œçš„å‘½ä»¤
 script:
 - hexo clean && hexo g -d
-
