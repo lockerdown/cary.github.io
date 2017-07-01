@@ -16,14 +16,27 @@ tags: 翻墙
 
 
 ### 配置ss
-
+```
 apt-get update apt-get install python-pip pip install shadowsocks
-
+```
+```
 vim /etc/shadowsocks.json
-
-{ "server":"0.0.0.0", "server_port":12306, "local_address": "127.0.0.1", "local_port":1080, "password":"my123456", "timeout":300, "method":"aes-256-cfb", "fast_open": true }
-
+```
+``` json
+{
+  "server":"0.0.0.0",
+  "server_port":12306,
+  "local_address": "127.0.0.1",
+  "local_port":1080,
+  "password":"my123456",
+  "timeout":300,
+  "method":"aes-256-cfb",
+  "fast_open": true
+}
+```
+```
 sudo ssserver -c /etc/shadowsocks.json -d start
+```
 
 + 停止：sudo ssserver -d stop
 + 查看日志: sudo less /var/log/shadowsocks.log
@@ -31,15 +44,19 @@ sudo ssserver -c /etc/shadowsocks.json -d start
 
 ### 加入自启动
 
+```
 sudo vim /etc/rc.local
+```
 
 ### TCP Fast Open
 
+```
 set fast_open to true in your config.json
 
 echo 3 > /proc/sys/net/ipv4/tcp_fastopen
 
 Create /etc/sysctl.d/local.conf
+```
 
 ```
 //内容
@@ -95,7 +112,7 @@ Then: sysctl --system
 ### 开启BBR加速
 
 **Kernel Version>4.9.0**
-
+```
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf sysctl -p
-
+```
 ### 重启VPS
