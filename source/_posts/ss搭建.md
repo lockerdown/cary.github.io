@@ -17,7 +17,9 @@ tags: 翻墙
 
 ### 配置ss
 ```
-apt-get update apt-get install python-pip pip install shadowsocks
+apt-get update
+apt-get install python-pip
+pip install shadowsocks
 ```
 ```
 vim /etc/shadowsocks.json
@@ -50,12 +52,14 @@ sudo vim /etc/rc.local
 
 ### TCP Fast Open
 
-```
+
 set fast_open to true in your config.json
 
+```
 echo 3 > /proc/sys/net/ipv4/tcp_fastopen
 
-Create /etc/sysctl.d/local.conf
+vim /etc/sysctl.d/local.conf
+
 ```
 
 ```
@@ -107,12 +111,36 @@ net.ipv4.tcp_congestion_control = hybla
 # net.ipv4.tcp_congestion_control = cubic
 ```
 
-Then: sysctl --system
+Then: 
+```
+sysctl --system
+```
 
 ### 开启BBR加速
 
-**Kernel Version>4.9.0**
+#### 开机后 uname -r 看看是不是内核 >= 4.9
+
+#### 执行 lsmod | grep bbr，如果结果中没有 tcp_bbr 的话就先执行
 ```
-echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf sysctl -p
+modprobe tcp_bbr
+echo "tcp_bbr" >> /etc/modules-load.d/modules.conf
 ```
+#### 执行
+```
+echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
+echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
+```
+#### 保存生效
+```
+sysctl -p
+```
+#### 执行
+```
+sysctl net.ipv4.tcp_available_congestion_control
+sysctl net.ipv4.tcp_congestion_control
+```
+#### 如果结果都有bbr, 则证明你的内核已开启bbr
+
+#### 看到有 tcp_bbr 模块即说明bbr已启动
+
 ### 重启VPS
