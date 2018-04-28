@@ -7,9 +7,11 @@ node_js:
 branches:
   only:
   - hexo  # 设置自动化部署的分支
-deploy:
-  fqdn:'cary.im'
-  
+
+addons:
+  hosts:
+  - cary.im
+
 before_install:
 - export TZ='Asia/Shanghai'  # 设置时区
 - npm install -g hexo
