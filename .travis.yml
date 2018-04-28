@@ -7,6 +7,9 @@ node_js:
 branches:
   only:
   - hexo  # 设置自动化部署的分支
+deploy:
+  fqdn:'cary.im'
+  
 before_install:
 - export TZ='Asia/Shanghai'  # 设置时区
 - npm install -g hexo
@@ -27,6 +30,9 @@ before_install:
 # 设置github账户信息
 - git config --global user.name "caryyang" #设置github用户名
 - git config --global user.email "carynihility@gmail.com" #设置github用户邮箱
+
+
+
 # 安装依赖组件
 install:
 - npm install
