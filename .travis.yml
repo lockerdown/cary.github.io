@@ -1,10 +1,16 @@
 language: node_js
 node_js:
   - "6"
-script: npm run build --prod
+script: 
+  - hexo clean && hexo g -d
+install:
+  - npm install
 cache:
   directories:
     - node_modules
+branches:
+  only:
+  - hexo  # 设置自动化部署的分支
 deploy:
   provider: pages
   skip_cleanup: true
