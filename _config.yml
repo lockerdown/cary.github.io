@@ -78,3 +78,4 @@ deploy:
   type: git
   repository: git@github.com:yangyichen/yangyichen.github.io.git
   barnch: master
+  fqdn: cary.im
