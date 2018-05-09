@@ -7,35 +7,39 @@ node_js:
 branches:
   only:
   - hexo  # 设置自动化部署的分支
+
 deploy:
   provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
-  local_dir: www
-  fqdn: cary.im
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
   on:
-    branch: master
+    branch: hexo
+  target-branch: master
+  local-dir: output
+  fqdn: cary.im # This updates the repository settings in GitHub and also adds a CNAME file in the master branch
+  verbose: true
 
 before_install:
 - export TZ='Asia/Shanghai'  # 设置时区
 - npm install -g hexo
 - npm install -g hexo-cli
-# 将xxxxxxxxxxx替换上面生成的内容
-# 这里面的文件路径可根据自己的情况进行修改
-# 解密id_rsa_blog.enc 输出到.ssh/文件夹下，命名为id_rsa
-- openssl aes-256-cbc -K $encrypted_b69137d15df0_key -iv $encrypted_b69137d15df0_iv
-  -in .travis/id_rsa_blog.enc -out ~/.ssh/id_rsa -d
 
-# 设置id_rsa文件权限
-- chmod 600 ~/.ssh/id_rsa
-# 添加ssh密钥
-- eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
-# 添加ssh配置文件
-- cp .travis/ssh_config ~/.ssh/config
-# 设置github账户信息
-- git config --global user.name "caryyang" #设置github用户名
-- git config --global user.email "carynihility@gmail.com" #设置github用户邮箱
+## 将xxxxxxxxxxx替换上面生成的内容
+## 这里面的文件路径可根据自己的情况进行修改
+## 解密id_rsa_blog.enc 输出到.ssh/文件夹下，命名为id_rsa
+#- openssl aes-256-cbc -K $encrypted_b69137d15df0_key -iv $encrypted_b69137d15df0_iv
+#  -in .travis/id_rsa_blog.enc -out ~/.ssh/id_rsa -d
+#
+## 设置id_rsa文件权限
+#- chmod 600 ~/.ssh/id_rsa
+## 添加ssh密钥
+#- eval $(ssh-agent)
+#- ssh-add ~/.ssh/id_rsa
+## 添加ssh配置文件
+#- cp .travis/ssh_config ~/.ssh/config
+## 设置github账户信息
+#- git config --global user.name "caryyang" #设置github用户名
+#- git config --global user.email "carynihility@gmail.com" #设置github用户邮箱
 
 
 
