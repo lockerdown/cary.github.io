@@ -1,9 +1,10 @@
 
 
 language: node_js
-# cache: bundler
+cache: yarn
 node_js:
-  - "6"  # nodejs的版本
+  - "7"  # nodejs的版本
+  - "8"
 branches:
   only:
   - hexo  # 设置自动化部署的分支
@@ -21,8 +22,8 @@ deploy:
 
 before_install:
 - export TZ='Asia/Shanghai'  # 设置时区
-- npm install -g hexo
-- npm install -g hexo-cli
+- yarn install -g hexo
+- yarn install -g hexo-cli
 
 ## 将xxxxxxxxxxx替换上面生成的内容
 ## 这里面的文件路径可根据自己的情况进行修改
@@ -45,7 +46,7 @@ before_install:
 
 # 安装依赖组件
 install:
-- npm install
+- yarn install
 # 执行的命令
 script:
 - hexo clean && hexo g -d
