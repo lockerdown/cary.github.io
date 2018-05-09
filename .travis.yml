@@ -22,8 +22,8 @@ deploy:
 
 before_install:
 - export TZ='Asia/Shanghai'  # 设置时区
-- yarn install -g hexo
-- yarn install -g hexo-cli
+- yarn global add hexo
+- yarn global add hexo-cli
 
 ## 将xxxxxxxxxxx替换上面生成的内容
 ## 这里面的文件路径可根据自己的情况进行修改
