@@ -63,7 +63,6 @@ vim /etc/sysctl.d/local.conf
 ```
 
 ```
-//内容
 # max open files
 fs.file-max = 51200
 # max read buffer
