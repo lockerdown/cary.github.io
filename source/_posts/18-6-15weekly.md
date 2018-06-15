@@ -55,6 +55,8 @@ import * as aa from './a.js'
 值得注意的是:
 当导出的时候写的是export default的时候不需要使用大括号,反之亦反
 
+
+目前在Node对ES6的兼容性日趋完善,在9+版本已经可以可以实现import和export,不需要借助babel等工具,具体的点连接看[Node 9下import/export的丝般顺滑使用](https://cnodejs.org/topic/5a0f2da5f9de6bb0542f090b)
 #### 下周任务
 
 万科测试
