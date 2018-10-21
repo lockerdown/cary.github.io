@@ -81,4 +81,4 @@ deploy:
   fqdn: cary.im
 
 # google analytics
-google_analytics:UA-99344891-1
+google_analytics: UA-99344891-1
