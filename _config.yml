@@ -79,3 +79,6 @@ deploy:
   repository: git@github.com:yangyichen/yangyichen.github.io.git
   barnch: master
   fqdn: cary.im
+
+# google analytics
+google_analytics:UA-99344891-1
