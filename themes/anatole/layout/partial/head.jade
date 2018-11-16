@@ -23,3 +23,10 @@ link(rel="stylesheet", href= url_for('css/style.css'))
 link(rel="stylesheet", href= url_for('css/blog_basic.css'))
 link(rel="stylesheet", href= url_for('css/font-awesome.min.css'))
 link(rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml")
+<!-- Global site tag (gtag.js) - Google Analytics -->
+script(src= url_for('https://www.googletagmanager.com/gtag/js?id=UA-99344891-1'))
+script
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-99344891-1');)
