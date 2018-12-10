@@ -4,7 +4,7 @@ date: 2018-12-07 11:42:51
 tags: webpack
 ---
 
-今天开始按照[webpack文档](https://webpack.docschina.org/)学习一遍,遇到一些重点难点就记录下来
+# 今天开始按照[webpack文档](https://webpack.docschina.org/)学习一遍,遇到一些重点难点就记录下来
 
 ## entry
 
@@ -106,5 +106,5 @@ plugins: [
 
 ## 其他文档
 
-[webpack loader详解](./webpack loader详解)
-[webpack plugin详解](./webpack plugin详解)
+[webpack loader详解](./2018/12/10/webpack loader详解)
+<!-- [webpack plugin详解](./webpack plugin详解) -->
