@@ -16,6 +16,7 @@ chunk以及vendor:
   - [ ]什么是`bundle`?
 - 引用 vendor 的部分替换为 `__webpack_require__()`
 - [长效缓存](http://web.jobbole.com/95110/)
+  - CachePlugin, RecordId
 
 ## output
 
@@ -79,6 +80,24 @@ loader特性:
 - 执行顺序为从右到左,从下到上
 - 可以指定include以及exclude文件
 - [ ]loader 接收查询参数(什么意思?)
+- 可以返回一个或多个结果,第一个为处理好后的内容,第二个可选,为可当做source map的对象
+
+## resolveLoader
+
+通常我们可以通过yarn安装已经发布的包,但是本地开发loader的时候就可以指定loader的目录
+
+```javascript
+resolveLoader: {
+    // 匹配的目录
+    modules: [ 'node_modules' ],
+    // 匹配的后缀
+    extensions: [ '.js', '.json' ],
+    // 指定读取的package.json字段名
+    mainFields: [ 'loader', 'main' ],
+    // loader的扩展名,如包名为foo-loader,则可省略-loader,直接为foo
+    moduleExtensions: [ '-loader' ]
+  }
+```
 
 ## plugins
 
@@ -104,7 +123,18 @@ plugins: [
 
 - [ ]插件原理后续补上
 
+## target
+
+支持的传入参数:
+
+- string
+  - web(默认)
+  - node
+  - async-node
+- function
+  - 传入自定义方法
+
 ## 其他文档
 
 [webpack loader详解](./2018/12/10/webpack loader详解)
-<!-- [webpack plugin详解](./webpack plugin详解) -->
+<!-- [webpack plugin详解](./webpack plugin详解)-->

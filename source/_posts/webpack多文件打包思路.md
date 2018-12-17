@@ -5,7 +5,8 @@ tags: webpack
 ---
 
 17年的时候做的项目，当时前后端分离的不是很彻底，.net写的控制器，所以我需要单独分离js，以下是我的webpack配置文件：
-```
+
+```javascript
 var path = require('path')
 var webpack = require('webpack')
 const globby = require('globby');
