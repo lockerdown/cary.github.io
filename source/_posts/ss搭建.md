@@ -14,6 +14,14 @@ tags: 翻墙
 #### Shadowsocks-使用说明：[https://github.com/shadowsocks/shadowsocks/wiki/Shadowsocks-%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E](http://test-ipv6.com/)
 ----
 
+### 一键搭建脚本
+```
+wget --no-check-certificate -O shadowsocks-all.sh https://raw.githubusercontent.com/teddysun/shadowsocks_install/master/shadowsocks-all.sh
+chmod +x shadowsocks-all.sh
+./shadowsocks-all.sh 2>&1 | tee shadowsocks-all.log
+```
+
+在centos下运行提示`wget command not found`时输入yum -y install wget 安装wget
 
 ### 配置ss
 ```
