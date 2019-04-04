@@ -6,6 +6,8 @@ tags: 技术
 
 ## Microtask 以及 Macrotask
 
+![](/imgs/eventLoop.jpg)
+
 下面的代码输出什么呢?
 
 ```javascript
