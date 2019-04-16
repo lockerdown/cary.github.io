@@ -104,7 +104,7 @@ for...of语句在可迭代对象（包括 Array，Map，Set，String，TypedArra
 map 等遍历函数只是一个同步方法,真正要实现异步返回需要用到`for of`,如果需要有多个参数,比如 index 和 item 就需要 Object.entries.
 
 ```javascript
-for (let [index, item] of arr) {
+for (let [index, item] of Object.entries(obj)) {
 }
 ```
 
