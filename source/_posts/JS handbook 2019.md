@@ -4,7 +4,7 @@ date: 2019-04-24 18:14:27
 tags: 文档翻译
 ---
 
-![Front End Developers Handbook 2019 Cover](./imgs/FM_2019Cover_final.jpg)
+![Front End Developers Handbook 2019 Cover](/imgs/FM_2019Cover_final.jpg)
 
 Front-end Developer Handbook 2019
 =================================
@@ -107,7 +107,7 @@ This chapter provides a baseline explanation for front-end development and the f
 > 
 > [https://en.wikipedia.org/wiki/Front-end\_web\_development](https://en.wikipedia.org/wiki/Front-end_web_development)
 
-![](./imgs/what-is-front-end-dev.png "https://www.upwork.com/hiring/development/front-end-developer/") Image source: [https://www.upwork.com/hiring/development/front-end-developer/](https://www.upwork.com/hiring/development/front-end-developer/)
+![](/imgs/what-is-front-end-dev.png "https://www.upwork.com/hiring/development/front-end-developer/") Image source: [https://www.upwork.com/hiring/development/front-end-developer/](https://www.upwork.com/hiring/development/front-end-developer/)
 
 #### A Front-end Developer...
 
