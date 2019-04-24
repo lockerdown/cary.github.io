@@ -1,3 +1,9 @@
+---
+title: 前端开发绿皮书2019
+date: 2019-04-24 18:14:27
+tags: 文档翻译
+---
+
 ![Front End Developers Handbook 2019 Cover](./imgs/FM_2019Cover_final.jpg)
 
 Front-end Developer Handbook 2019
