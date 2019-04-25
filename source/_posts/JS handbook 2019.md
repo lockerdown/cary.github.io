@@ -1,57 +1,77 @@
 ---
-title: 前端开发绿皮书2019
+title: 前端开发手册2019年版
 date: 2019-04-24 18:14:27
 tags: 文档翻译
 ---
 
-![Front End Developers Handbook 2019 Cover](/imgs/FM_2019Cover_final.jpg)
+![前端开发手册2019年版封面](/imgs/FM_2019Cover_final.jpg)
 
 Front-end Developer Handbook 2019
+前端开发手册2019年版
 =================================
 
 ### Written by [Cody Lindley](http://codylindley.com/)
 
 _Sponsored by [Frontend Masters](https://frontendmasters.com/), advancing your skills with in-depth, modern front-end engineering courses_
 
-Download: [PDF](https://github.com/FrontendMasters/front-end-handbook-2019/raw/master/exports/Front-end%20Developer%20Handbook%202019.pdf) | [epub](https://github.com/FrontendMasters/front-end-handbook-2019/raw/master/exports/Front-End%20Developer%20Handbook%202019.epub)
+下载: [PDF](https://github.com/FrontendMasters/front-end-handbook-2019/raw/master/exports/Front-end%20Developer%20Handbook%202019.pdf) | [epub](https://github.com/FrontendMasters/front-end-handbook-2019/raw/master/exports/Front-End%20Developer%20Handbook%202019.epub)
 
 * * *
 
-### Overview:
+### Overview: 总览:
 
 This is a guide that everyone can use to learn about the practice of front-end development. It broadly outlines and discusses the practice of front-end engineering: how to learn it and what tools are used when practicing it in 2019.
+这是一本每个人都能学习关于前端技能实践的指南。它大致概述和讨论了关于前端工程师的实践方法: 如何学习前端以及在2019年用什么工具去实践。
 
 It is specifically written with the intention of being a professional resource for potential and currently practicing front-end developers to equip themselves with learning materials and development tools. Secondarily, it can be used by managers, CTOs, instructors, and head hunters to gain insights into the practice of front-end development.
+本手册是为了那些目前正在学习前端和想要深入了解前端，以配备学习材料和开发工具的人准备的。其次，本手册也为项目经理,CTO,讲师和猎头们准备深入了解前端开发而准备的。
 
 The content of the handbook favors web technologies (HTML, CSS, DOM, and JavaScript) and those solutions that are directly built on top of these open technologies. The materials referenced and discussed in the book are either best in class or the current offering to a problem.
+本手册内容主要偏向网页技术(HTML, CSS, DOM, 和 JavaScript)以及那些直接建立在这些技术之上的解决方案。
 
 The book should not be considered a comprehensive outline of all resources available to a front-end developer. The value of the book is tied up in a terse, focused, and timely curation of just enough categorical information so as not to overwhelm anyone on any one particular subject matter.
+本手册不应该被前端开发人员当初是所有资源的综合概述。它的价值在于简洁，集中以及及时策划刚刚好的分类信息，以免任何人对对任何一个主题的偏颇。
 
 The intention is to release an update to the content yearly. This is currently the fourth year an edition has been released.
+我们会每年都会更新文章。当前发布的版本已经是第四版了。
 
 * * *
 
 **What is in this Handbook**:
+**内容提要**:
 
 Chapter [0](#0) provides a lite recap of the year in front-end development and what may be to come. Chapter [1](#1) & [2](#2) aim to give a brief overview of the discipline and practice of front-end development. Chapters [3](#3) & [4](#4) organize and recommend learning paths and resources. Chapter [5](#5) organizes and list the tools used by front-end developers and Chapter [6](#6) highlights front-end information outlets.
+第[0](#0)章提到了去年前端开发的梗概以及未来的趋势。第[1](#1)和第[2](#2)章主旨是关于前端开发的领域以及实践。第[3](#3)和第[4](#4)章整理归纳了一些学习方法以及资源。第[5](#5)张整理了一个关于前端要是用到的工具的列表。第[6](#6)章推荐了一些前端学习的网站资料
 
 * * *
 
 **Contribute content, suggestions, and fixes on github**:
+**在github上贡献内容，提出建议和修复问题**:
+
 
 [https://github.com/FrontendMasters/front-end-handbook-2019](https://github.com/FrontendMasters/front-end-handbook-2019)
 
 * * *
 
 Chapter 0. Recap of 2018 and Looking Forward
+第0章： 回顾2018以及展望未来
 --------------------------------------------
 
-### 0.1 — Recap of Front-end Development in 2018
+### 0.1 — Recap of Front-end Development in 2018 回顾2018
 
 *   React had several notable releases this past year that included, [lifecycle methods](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes), [context API](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#official-context-api), [suspense](https://reactjs.org/docs/react-api.html#reactsuspense), and [React hooks](https://reactjs.org/docs/hooks-intro.html).
+*   React推出了许多牛逼的功能。比如：[lifecycle methods](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes)， [context API](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#official-context-api), [suspense](https://reactjs.org/docs/react-api.html#reactsuspense)，和[React hooks](https://reactjs.org/docs/hooks-intro.html)。
+
 *   [Microsoft buys Github](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/). Yeah, that happened.
+*   [微软收购了Github](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/)。
+
 *   Fonts created by CSS became a [thing](https://yusugomori.com/projects/css-sans/).
+*   用CSS创建字体成为了[可能](https://yusugomori.com/projects/css-sans/)。(当然想创建中文字符估计还是不太现实。。)
+
 *   What I used to call front-end driven apps, gets labeled ["serverless"](https://thepowerofserverless.info/). Unfortunately, this term is [overloaded](owler.com/articles/serverless.html). However, the term [JAMstack](https://jamstack.org/) does seem to be [resonating](https://jamstackconf.com/nyc/) with developers.
+*   我以前提到前端驱动的app,现在被打上了["无服务器"](https://thepowerofserverless.info/)的标签。但不幸的是，他们的团队[撑不住了](owler.com/articles/serverless.html)。但是[JAMstack](https://jamstack.org/)团队看起来想帮助开发者重新开始。
+[精读《Serverless 给前端带来了什么》](https://segmentfault.com/a/1190000018455041)
+
 *   Google offered some neat tools this year to help make webpages load faster, i.e. [squoosh](https://github.com/GoogleChromeLabs/squoosh/) and [quicklink](https://github.com/GoogleChromeLabs/quicklink).
 *   [Vue gets](https://risingstars.js.org/2018/en/#section-framework) more [Github stars](https://hasvuepassedreactyet.surge.sh/) than React this year. But React remains dominant in [terms](https://2018.stateofjs.com/front-end-frameworks/overview/) of [use](https://www.npmjs.com/browse/depended).
 *   A solution similar to React, without a virtual DOM or JSX, is introduced [RE:DOM](https://github.com/redom/redom).
