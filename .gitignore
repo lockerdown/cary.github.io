@@ -4,7 +4,7 @@
 /test
 /3th
 /.idea
-/.vscode
+/.vscode/*
 yarn.lock
 
 /npm-debug.log
