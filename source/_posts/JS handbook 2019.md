@@ -73,15 +73,35 @@ Chapter 0. Recap of 2018 and Looking Forward
 [精读《Serverless 给前端带来了什么》](https://segmentfault.com/a/1190000018455041)
 
 *   Google offered some neat tools this year to help make webpages load faster, i.e. [squoosh](https://github.com/GoogleChromeLabs/squoosh/) and [quicklink](https://github.com/GoogleChromeLabs/quicklink).
+*   Google今年提供了一些原生工具来帮助网页加载的更快速,比如[squoosh](https://github.com/GoogleChromeLabs/squoosh/)和[quicklink](https://github.com/GoogleChromeLabs/quicklink).
+
 *   [Vue gets](https://risingstars.js.org/2018/en/#section-framework) more [Github stars](https://hasvuepassedreactyet.surge.sh/) than React this year. But React remains dominant in [terms](https://2018.stateofjs.com/front-end-frameworks/overview/) of [use](https://www.npmjs.com/browse/depended).
+*   今年[Vue](https://risingstars.js.org/2018/en/#section-framework)比React获得了更多的[stars](https://hasvuepassedreactyet.surge.sh/)。但是React在使用数量方面任然占据主导地位。
+
 *   A solution similar to React, without a virtual DOM or JSX, is introduced [RE:DOM](https://github.com/redom/redom).
+*   [RE:DOM](https://github.com/redom/redom)介绍了一个和React相似的，不用虚拟DOM或者JSX的解决方案。
+
 *   Alternatives to NW.js and Electron show up, [DeskGap](https://deskgap.com/) and [Neutralino.js](https://neutralino.js.org/).
+*   NW.js和Electron的替代方案出现了，[DeskGap](https://deskgap.com/)和[Neutralino.js](https://neutralino.js.org/)。(都是跨平台web应用)
+
 *   In 2017 the [great](https://medium.com/@jerrylowm/the-death-of-front-end-developers-803a95e0f411) divide between a [front-end HTML & CSS developer](https://medium.com/@mandy.michael/is-there-any-value-in-people-who-cannot-write-javascript-d0a66b16de06) v.s. [front-end application developer is realized/verbalized](https://medium.com/@mandy.michael/is-there-any-value-in-people-who-cannot-write-javascript-d0a66b16de06). In 2018 that [divide has grown wider and deeper](https://css-tricks.com/the-great-divide/) and more [people](https://rachelandrew.co.uk/archives/2019/01/30/html-css-and-our-vanishing-industry-entry-points/) start to [feel](https://hackernoon.com/the-backendification-of-frontend-development-62f218a773d4) [the](http://bradfrost.com/blog/post/big-ol-ball-o-javascript/) [divide](https://justmarkup.com/log/2018/11/just-markup/).
+*   在2017年，[前端页面样式开发工程师](https://medium.com/@mandy.michael/is-there-any-value-in-people-who-cannot-write-javascript-d0a66b16de06)与[前端应用开发工程师](https://medium.com/@mandy.michael/is-there-any-value-in-people-who-cannot-write-javascript-d0a66b16de06)存在巨大的鸿沟。而到了2018年，他们之间的鸿沟变得越来越[深不可测](https://css-tricks.com/the-great-divide/)。而且越来越多的[人](https://rachelandrew.co.uk/archives/2019/01/30/html-css-and-our-vanishing-industry-entry-points/)开始[感受](https://hackernoon.com/the-backendification-of-frontend-development-62f218a773d4)到了[这种](http://bradfrost.com/blog/post/big-ol-ball-o-javascript/)[鸿沟](https://justmarkup.com/log/2018/11/just-markup/)的存在。
+
 *   This year, like most recent years, was stock full of app/framework solutions trying to contend with the mainstream JavaScript app tools (i.e. [React, Angular, and Vue etc...](https://stateofjs.com/2017/front-end/results)) Let me list them for you. [Radi.js](https://radi.js.org/), [DisplayJS](https://display.js.org/), [Stimulus](https://stimulusjs.org/), [Omi](https://github.com/Tencent/omi), [Quasar](https://quasar-framework.org).
+*   今年，或者说是最近几年，充斥着想与主流JS库，（比如[React，Angular，和Vue等...](https://stateofjs.com/2017/front-end/results)抗衡的应用或者框架。比如：[Radi.js](https://radi.js.org/)，[DisplayJS](https://display.js.org/)，[Stimulus](https://stimulusjs.org/)，[Omi](https://github.com/Tencent/omi)，[Quasar](https://quasar-framework.org)。
+
 *   JavaScript frameworks start offering their own languages that compile to JavaScript (e.g. [Mint](https://www.mint-lang.com/)).
+*   一些JS框架开始用他们自己的语言来反编译为JS。比如[Mint](https://www.mint-lang.com/)。
+
 *   [CodeSandbox](https://codesandbox.io/) evolves to become the dominant solution for online code sharing.
+*   [CodeSandbox](https://codesandbox.io/)演变成了在线编码与分享中的佼佼者。
+
 *   [CSS Grid](https://cssgridgarden.com/) and [CSS Flexbox](https://flexboxfroggy.com/) are fully supported in modern browsers and get taken for some serious rides. But many are left [wondering](https://www.youtube.com/watch?v=hs3piaN4b5I) when to [use which one and how](https://css-irl.info/to-grid-or-to-flex/).
+*   [CSS Grid](https://cssgridgarden.com/)和[CSS Flexbox](https://flexboxfroggy.com/)在现代浏览器中已经全部兼容并测试通过。但是却留下了我们到底该[如何抉择](https://css-irl.info/to-grid-or-to-flex/)的[疑问](https://www.youtube.com/watch?v=hs3piaN4b5I)。
+
 *   Many realize the long terms costs of bolted on type systems (e.g. TypeScript and Flow). Some concluded bolted on systems are not unlike bolted on module systems (i.e. AMD/Require.js) and come with [more issues than solutions](https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b). Minimally, many developers realize that if types are needed in large code bases, that bolted on systems are not ideal in comparison to languages that have them baked in (e.g. [Reason](https://reasonml.github.io/), [Purescript](http://www.purescript.org/), [Elm](https://elm-lang.org/)).
+*   许多人意识到了使用强类型语言的代价，比如TypeScript和Flow。有人总结说系统层面的强类型和模块化系统层面的强类型并不相同，就像AMD/Require.js。
+
 *   [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) gain [browser support](https://caniuse.com/#feat=css-variables) among modern web browsers
 *   The flavors of [CSS in JS](http://michelebertoli.github.io/css-in-js/) exploded and [some](http://bradfrost.com/blog/link/whats-wrong-with-css-in-js/) question the practice.
 *   [ES modules](https://caniuse.com/#search=modules) are now usable in modern browsers and [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import#dynamic) are close behind. We are even seeing a shift in [tooling](https://www.pikapkg.com/blog/introducing-pika-pack/) around this fact.
