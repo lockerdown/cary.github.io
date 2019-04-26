@@ -30,7 +30,7 @@ The content of the handbook favors web technologies (HTML, CSS, DOM, and JavaScr
 本手册内容主要偏向网页技术(HTML, CSS, DOM, 和 JavaScript)以及那些直接建立在这些技术之上的解决方案。
 
 The book should not be considered a comprehensive outline of all resources available to a front-end developer. The value of the book is tied up in a terse, focused, and timely curation of just enough categorical information so as not to overwhelm anyone on any one particular subject matter.
-本手册不应该被前端开发人员当初是所有资源的综合概述。它的价值在于简洁，集中以及及时策划刚刚好的分类信息，以免任何人对对任何一个主题的偏颇。
+本手册不应该被前端开发人员当初是所有资源的综合概述。它的价值在于简洁，集中以及搜集刚刚好的分类信息，以免对任何一个主题产生偏颇。
 
 The intention is to release an update to the content yearly. This is currently the fourth year an edition has been released.
 我们会每年都会更新文章。当前发布的版本已经是第四版了。
@@ -100,24 +100,52 @@ Chapter 0. Recap of 2018 and Looking Forward
 *   [CSS Grid](https://cssgridgarden.com/)和[CSS Flexbox](https://flexboxfroggy.com/)在现代浏览器中已经全部兼容并测试通过。但是却留下了我们到底该[如何抉择](https://css-irl.info/to-grid-or-to-flex/)的[疑问](https://www.youtube.com/watch?v=hs3piaN4b5I)。
 
 *   Many realize the long terms costs of bolted on type systems (e.g. TypeScript and Flow). Some concluded bolted on systems are not unlike bolted on module systems (i.e. AMD/Require.js) and come with [more issues than solutions](https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b). Minimally, many developers realize that if types are needed in large code bases, that bolted on systems are not ideal in comparison to languages that have them baked in (e.g. [Reason](https://reasonml.github.io/), [Purescript](http://www.purescript.org/), [Elm](https://elm-lang.org/)).
-*   许多人意识到了使用强类型语言的代价，比如TypeScript和Flow。有人总结说系统层面的强类型和模块化系统层面的强类型并不相同，就像AMD/Require.js。
+*   许多人意识到了使用强类型语言的代价，比如TypeScript和Flow。有人总结说系统层面的强类型和模块化系统层面的强类型并不相同，（比如AMD/Require.js）随之而来的却是[更多问题和更少的解决方案](https://medium.com/javascript-scene/the-typescript-tax-132ff4cb175b)。
 
 *   [CSS Variables](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables) gain [browser support](https://caniuse.com/#feat=css-variables) among modern web browsers
-*   The flavors of [CSS in JS](http://michelebertoli.github.io/css-in-js/) exploded and [some](http://bradfrost.com/blog/link/whats-wrong-with-css-in-js/) question the practice.
-*   [ES modules](https://caniuse.com/#search=modules) are now usable in modern browsers and [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import#dynamic) are close behind. We are even seeing a shift in [tooling](https://www.pikapkg.com/blog/introducing-pika-pack/) around this fact.
-*   Many realize that end to end testing is the starting point of doing tests correctly in large part due to [Cypress](https://www.cypress.io/how-it-works/) (i.e. Cypress first, then [Jest](https://jestjs.io/)).
-*   While [Webpack](https://webpack.js.org/) was heavily used again this year, many developers found [Parcel](https://github.com/parcel-bundler/parcel) to be easier to get up and running.
-*   One of the most important questions asked this year was, what is the [cost of JavaScript](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4).
-*   [Babel 7 was released this year](https://babeljs.io/blog/2018/08/27/7.0.0). That's a big deal because the last major release was almost three years ago.
-*   The reality of too much JavaScript change too fast is realized and people start [talking](https://www.robinwieruch.de/javascript-fundamentals-react-requirements/) about what you need to know before you can even learn something like React. The fight is real.
-*   Most developers found GraphQL, via [Apollo](https://www.apollographql.com/), and [see it](https://blog.bitsrc.io/why-does-everyone-love-graphql-17de7f99f05a) as the next evolution for data API's.
-*   Gulp and friends definitely took a back seat to [NPM/Yarn run](https://css-tricks.com/why-npm-scripts/). But this did not stop Microsoft from getting in the game with [Just](https://github.com/Microsoft/just).
-*   This year, one can not only lint/hint HTML, CSS, and JavaScript they can [lint/hint the web](https://webhint.io) itself.
-*   The [2018 Front-End Tooling survey](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2018-results) is worth reading if only to realize just how much jQuery is still used.
-*   It [can't be denied](https://2018.stateofjs.com/javascript-flavors/typescript/) [TypeScript](https://www.typescriptlang.org/) gained a lot of users this year.
-*   [VScode](https://code.visualstudio.com/), [dominates](https://triplebyte.com/blog/editor-report-the-rise-of-visual-studio-code) as the code editor of choice.
+*   [CSS变量](https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_variables)获得了现代浏览器的[兼容](https://caniuse.com/#feat=css-variables)。
 
-### 0.2 — In 2019, Expect...
+*   The flavors of [CSS in JS](http://michelebertoli.github.io/css-in-js/) exploded and [some](http://bradfrost.com/blog/link/whats-wrong-with-css-in-js/) question the practice.
+*   如今对[CSS in JS](http://michelebertoli.github.io/css-in-js/)技术的偏爱导致了[某些人](http://bradfrost.com/blog/link/whats-wrong-with-css-in-js/)对此提出了反对意见。
+
+*   [ES modules](https://caniuse.com/#search=modules) are now usable in modern browsers and [dynamic imports](https://developers.google.com/web/updates/2017/11/dynamic-import#dynamic) are close behind. We are even seeing a shift in [tooling](https://www.pikapkg.com/blog/introducing-pika-pack/) around this fact.
+*   现代浏览器目前已经支持了[ES模块化](https://caniuse.com/#search=modules)，[动态imports](https://developers.google.com/web/updates/2017/11/dynamic-import#dynamic)也紧随其后。我们甚至看到[构建工具](https://www.pikapkg.com/blog/introducing-pika-pack/)也围绕着这一事实发生转变。
+
+*   Many realize that end to end testing is the starting point of doing tests correctly in large part due to [Cypress](https://www.cypress.io/how-it-works/) (i.e. Cypress first, then [Jest](https://jestjs.io/)).
+*   许多人意识到E2E是一个很好的测试根基，大部分归功于[Cypress](https://www.cypress.io/how-it-works/) (Cypress排名靠前，然后是[Jest](https://jestjs.io/))在测试中发挥了很好的作用。
+
+*   While [Webpack](https://webpack.js.org/) was heavily used again this year, many developers found [Parcel](https://github.com/parcel-bundler/parcel) to be easier to get up and running.
+*   当[Webpack](https://webpack.js.org/)在今年流行的时候，许多开发者发现[Parcel](https://github.com/parcel-bundler/parcel)似乎更容易上手运行。
+
+*   One of the most important questions asked this year was, what is the [cost of JavaScript](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4).
+*   今年问到的最重要的问题之一：[JavaScript存在的价值](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)是什么。
+
+*   [Babel 7 was released this year](https://babeljs.io/blog/2018/08/27/7.0.0). That's a big deal because the last major release was almost three years ago.
+*   [今年发布了Babel 7](https://babeljs.io/blog/2018/08/27/7.0.0).这是个大事情，因为上个大更新已经是3年前了。
+
+*   The reality of too much JavaScript change too fast is realized and people start [talking](https://www.robinwieruch.de/javascript-fundamentals-react-requirements/) about what you need to know before you can even learn something like React. The fight is real.
+*   JavaScript变化太快的事实已经被证实，人们开始[讨论](https://www.robinwieruch.de/javascript-fundamentals-react-requirements/)你在开始学习类似React框架之前需要知道的东西。战斗是真实的
+
+*   Most developers found GraphQL, via [Apollo](https://www.apollographql.com/), and [see it](https://blog.bitsrc.io/why-does-everyone-love-graphql-17de7f99f05a) as the next evolution for data API's.
+*   大多数开发者通过[Apollo](https://www.apollographql.com/)发现并[认为](https://blog.bitsrc.io/why-does-everyone-love-graphql-17de7f99f05a)GraphQL是下一代数据API的潮流。
+
+*   Gulp and friends definitely took a back seat to [NPM/Yarn run](https://css-tricks.com/why-npm-scripts/). But this did not stop Microsoft from getting in the game with [Just](https://github.com/Microsoft/just).
+*   Gulp和他的朋友们已经通过[NPM/Yarn run](https://css-tricks.com/why-npm-scripts/)退居二线，但这并没有阻止Microsoft用[Just](https://github.com/Microsoft/just)来参与这场游戏。
+
+*   This year, one can not only lint/hint HTML, CSS, and JavaScript they can [lint/hint the web](https://webhint.io) itself.
+*   今年，人们不仅仅可以lint/hint HTML，CSS，和JavaScript而且可以[lint/hint web页面](https://webhint.io)。
+
+*   The [2018 Front-End Tooling survey](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2018-results) is worth reading if only to realize just how much jQuery is still used.
+*   如果你想知道有多少人还在用jQuery，那么[2018前端框架工具调查](https://ashleynolan.co.uk/blog/frontend-tooling-survey-2018-results)还是值得一看的。
+
+*   It [can't be denied](https://2018.stateofjs.com/javascript-flavors/typescript/) [TypeScript](https://www.typescriptlang.org/) gained a lot of users this year.
+*   [不可置否](https://2018.stateofjs.com/javascript-flavors/typescript/)的是，[TypeScript](https://www.typescriptlang.org/)今年收获了很多用户。
+
+*   [VScode](https://code.visualstudio.com/), [dominates](https://triplebyte.com/blog/editor-report-the-rise-of-visual-studio-code) as the code editor of choice.
+*   [VScode](https://code.visualstudio.com/)作为首选，在用户中占据了[主导地位](https://triplebyte.com/blog/editor-report-the-rise-of-visual-studio-code)
+
+
+### 0.2 — In 2019, Expect...  展望2019。。。
 
 *   Hopefully, more of this to come. "[Stepping away from Sass](https://cathydutton.co.uk/posts/why-i-stopped-using-sass/)".
 *   Still a good idea to keep an eye on and learn about the up coming additions (and potential additions) to CSS via [https://cssdb.org](https://cssdb.org/)
@@ -198,9 +226,9 @@ Some examples of these environments are:
 *   [React Native](https://facebook.github.io/react-native/)
 *   [NativeScript](https://www.nativescript.org/)
 
-**Notes:**
-
-1.  Make sure you are clear what exactly is meant by the "web platform". Read the, ["Open Web Platform"](https://en.wikipedia.org/wiki/Open_Web_Platform) Wikipedia page. Explore [the many technologies](https://platform.html5.org/) that make up the web platform.
+>**Notes:**
+>
+>1.  Make sure you are clear what exactly is meant by the "web platform". Read the, ["Open Web Platform"](https://en.wikipedia.org/wiki/Open_Web_Platform) Wikipedia page. Explore [the many technologies](https://platform.html5.org/) that make up the web platform.
 
 Chapter 2. The Practice of Front-end Development: Overview
 ----------------------------------------------------------
@@ -211,7 +239,7 @@ This chapter will break down and broadly describes the practice of front-end eng
 
 How exactly does one become a front-end developer? Well, it's complicated. Just consider this road map:
 
-![](assets/images/frontend.png "https://github.com/kamranahmedse/developer-roadmap")
+![](/imgs/frontend.png "https://github.com/kamranahmedse/developer-roadmap")
 
 Image source: [https://github.com/kamranahmedse/developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
 
@@ -277,13 +305,14 @@ Below is a list and description of various front-end job titles (Keep in mind ti
 
 **Front-End Testing/QA**: When the word "Testing" or "QA" is included in the job title, this will denote that the developer has extensive experience testing and managing software that involves unit testing, functional testing, user testing, and A/B testing.
 
-**Notes:**
+>**Notes:**
+>
+>1.  If you come across the "Full Stack" or the generic "Web Developer" terms in job titles these words may be used by an employer to describe a role that is responsible for all aspects of web/app development, i.e., both front-end (potentially including design) and back-end.
 
-1.  If you come across the "Full Stack" or the generic "Web Developer" terms in job titles these words may be used by an employer to describe a role that is responsible for all aspects of web/app development, i.e., both front-end (potentially including design) and back-end.
 
 ### 2.3 - Baseline Web Technologies Employed by Front-End Developers
 
-![](assets/images/web-tech-employed.jpg "HTML CSS and JS")
+![](/imgs/web-tech-employed.jpg "HTML CSS and JS")
 
 The following core web technologies are employed by front-end developers (consider learning them in this order):
 
@@ -409,7 +438,7 @@ Most relevant specifications:
 
 ### 2.4 - Potential Front-end Developer Skills
 
-![](assets/images/front-end-skills.png "http://blog.naustud.io/2015/06/baseline-for-modern-front-end-developers.html")
+![](/imgs/front-end-skills.png "http://blog.naustud.io/2015/06/baseline-for-modern-front-end-developers.html")
 
 Image source: [http://blog.naustud.io/2015/06/baseline-for-modern-front-end-developers.html](http://blog.naustud.io/2015/06/baseline-for-modern-front-end-developers.html)
 
@@ -489,7 +518,7 @@ These operating systems typically run on one or more of the following devices:
 *   Watch
 *   [Things](https://en.wikipedia.org/wiki/Internet_of_things) (i.e., anything you can imagine, car, refrigerator, lights, thermostat, etc.)
 
-![](assets/images/growth-iot.jpg "https://www.enterpriseirregulars.com/104084/roundup-internet-things-forecasts-market-estimates-2015/")
+![](/imgs/growth-iot.jpg "https://www.enterpriseirregulars.com/104084/roundup-internet-things-forecasts-market-estimates-2015/")
 
 Image source: [https://www.enterpriseirregulars.com/104084/roundup-internet-things-forecasts-market-estimates-2015/](https://www.enterpriseirregulars.com/104084/roundup-internet-things-forecasts-market-estimates-2015/)
 
@@ -526,15 +555,15 @@ A larger web team might include the following roles not shown above:
 
 ### 2.7 - Generalist/Full-Stack Myth
 
-![Full Stack Developer](assets/images/full-stack.jpg)
+![Full Stack Developer](/imgs/full-stack.jpg)
 
 The term "Full-Stack" developer has come to take on several meanings. So many, that not one meaning is clear when the term is used. Just consider the results from the two surveys shown below. These results might lead one to believe that being a full-stack developer is commonplace. But, in my almost 20 years of experience, this is anything but the case in a professional context.
 
-![](assets/images/fullstack1.png "https://medium.freecodecamp.com/we-asked-15-000-people-who-they-are-and-how-theyre-learning-to-code-4104e29b2781#.ngcpn8nlz")
+![](/imgs/fullstack1.png "https://medium.freecodecamp.com/we-asked-15-000-people-who-they-are-and-how-theyre-learning-to-code-4104e29b2781#.ngcpn8nlz")
 
 Image source: [https://medium.freecodecamp.com/we-asked-15-000-people-who-they-are-and-how-theyre-learning-to-code-4104e29b2781#.ngcpn8nlz](https://medium.freecodecamp.com/we-asked-15-000-people-who-they-are-and-how-theyre-learning-to-code-4104e29b2781#.ngcpn8nlz)
 
-![](assets/images/fullstack2.png "https://insights.stackoverflow.com/survey/2017#developer-profile-specific-developer-types")
+![](/imgs/fullstack2.png "https://insights.stackoverflow.com/survey/2017#developer-profile-specific-developer-types")
 
 Image source: [https://insights.stackoverflow.com/survey/2017#developer-profile-specific-developer-types](https://insights.stackoverflow.com/survey/2018/#developer-profile)
 
@@ -585,9 +614,10 @@ A plethora of technical job listing outlets exist. The narrowed list below are c
 *   [weworkremotely.com](https://weworkremotely.com/)
 *   [www.smashingmagazine.com/jobs/](https://www.smashingmagazine.com/jobs/)
 
-**Notes:**
 
-1.  Want to work remotely as a front-end developer checkout these [remote-friendly companies](https://github.com/jessicard/remote-jobs).
+>**Notes:**
+>
+>1.  Want to work remotely as a front-end developer checkout these [remote-friendly companies](https://github.com/jessicard/remote-jobs).
 
 ### 2.10 - Front-End Salaries
 
@@ -595,9 +625,10 @@ The national average in the U.S for a mid-level front-end developer is somewhere
 
 Of course when you first start expect to enter the field at around 40k depending upon location and experience.
 
-**Notes:**
 
-1.  A lead/senior front-end developer/engineer can potentially live wherever they want (i.e., work remotely) and make over $150k a year (visit [angel.co](https://angel.co/jobs), sign-up, review front-end jobs over $150k or examine the salary ranges on [Stack Overflow Jobs](https://stackoverflow.com/jobs?q=front-end&sort=y)).
+>**Notes:**
+>
+>1.  A lead/senior front-end developer/engineer can potentially live wherever they want (i.e., work remotely) and make over $150k a year (visit [angel.co](https://angel.co/jobs), sign-up, review front-end jobs over $150k or examine the salary ranges on [Stack Overflow Jobs](https://stackoverflow.com/jobs?q=front-end&sort=y)).
 
 Chapter 3. Learning Front-end Dev: Self Directed Resources/Recommendations
 --------------------------------------------------------------------------
@@ -612,7 +643,7 @@ The learning resources identified (articles, books, videos, screencasts etc..) w
 > 
 > — [Wikipedia](https://en.wikipedia.org/wiki/Internet)
 
- [![How the internet works](assets/images/how-the-internet-works.jpg "https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/")](assets/images/how-the-internet-works.jpg) 
+ [![How the internet works](/imgs/how-the-internet-works.jpg "https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/")](/imgs/how-the-internet-works.jpg) 
 
 Image source: [https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/](https://www.helloitsliam.com/2014/12/20/how-the-internet-works-infographic/)
 
@@ -626,7 +657,7 @@ Image source: [https://www.helloitsliam.com/2014/12/20/how-the-internet-works-in
 *   [What Is the Internet? Or, "You Say Tomato, I Say TCP/IP"](http://www.20thingsilearned.com/en-US/what-is-the-internet/1) \[read\]
 *   [Don’t Fear the Internet](http://www.dontfeartheinternet.com/)
 
-![](assets/images/who-runs-the-internet-infographic.jpg "http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/")
+![](/imgs/who-runs-the-internet-infographic.jpg "http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/")
 
 Image source: [http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/](http://www.bitrebels.com/technology/find-out-who-runs-the-internet-chart/)
 
@@ -643,7 +674,7 @@ Image source: [http://www.bitrebels.com/technology/find-out-who-runs-the-interne
 3.  [Internet Explorer](http://windows.microsoft.com/en-us/internet-explorer/download-ie) (engine: [Trident](https://en.wikipedia.org/wiki/Trident_%28layout_engine%29) \+ [Chakra](https://en.wikipedia.org/wiki/Chakra_%28JScript_engine%29))
 4.  [Safari](https://www.apple.com/safari/) (engine: [Webkit](https://en.wikipedia.org/wiki/WebKit) \+ [SquirrelFish](https://trac.webkit.org/wiki/SquirrelFish))
 
-![](assets/images/statcounter.png "http://gs.statcounter.com/browser-market-share")
+![](/imgs/statcounter.png "http://gs.statcounter.com/browser-market-share")
 
 Image source: [http://gs.statcounter.com/browser-market-share](http://gs.statcounter.com/browser-market-share)
 
@@ -698,7 +729,7 @@ As of today, most front-end developers use Chrome and "Chrome Dev Tools" to deve
 > 
 > — [Wikipedia](https://en.wikipedia.org/wiki/Domain_Name_System)
 
-![](assets/images/how_dns_works.jpg "http://www.digital-digest.com/blog/DVDGuy/wp-content/uploads/2011/11/how_dns_works.jpg")
+![](/imgs/how_dns_works.jpg "http://www.digital-digest.com/blog/DVDGuy/wp-content/uploads/2011/11/how_dns_works.jpg")
 
 Image source: [http://www.digital-digest.com/blog/DVDGuy/wp-content/uploads/2011/11/how\_dns\_works.jpg](http://www.digital-digest.com/blog/DVDGuy/wp-content/uploads/2011/11/how_dns_works.jpg)
 
@@ -773,7 +804,7 @@ Image source: [http://www.digital-digest.com/blog/DVDGuy/wp-content/uploads/2011
 
 *   [Web Hosting 101: Get Your Website Live on the Web in No Time](https://www.udemy.com/web-hosting-101/) \[video\]
 
-![](assets/images/what-is-web-hosting-infographic.jpg "https://firstsiteguide.com/wp-content/uploads/2016/06/what-is-web-hosting-infographic.jpg")
+![](/imgs/what-is-web-hosting-infographic.jpg "https://firstsiteguide.com/wp-content/uploads/2016/06/what-is-web-hosting-infographic.jpg")
 
 Image source: [https://firstsiteguide.com/wp-content/uploads/2016/06/what-is-web-hosting-infographic.jpg](https://firstsiteguide.com/wp-content/uploads/2016/06/what-is-web-hosting-infographic.jpg)
 
@@ -928,7 +959,7 @@ Liken to constructing a house, one might consider HTML the framing and CSS to be
 > 
 > — [Wikipedia](https://en.wikipedia.org/wiki/Search_engine_optimization)
 
-![](assets/images/how-does-seo-work.jpg "https://visual.ly/community/infographic/computers/how-does-seo-work")
+![](/imgs/how-does-seo-work.jpg "https://visual.ly/community/infographic/computers/how-does-seo-work")
 
 Image source: [https://visual.ly/community/infographic/computers/how-does-seo-work](https://visual.ly/community/infographic/computers/how-does-seo-work)
 
@@ -1182,7 +1213,7 @@ The ideal path, but certainly the most difficult, would be to first learn JavaSc
 
 ### 3.15 - Learn Web/Browser APIs
 
-![](assets/images/web-api.png "http://www.evolutionoftheweb.com/")
+![](/imgs/web-api.png "http://www.evolutionoftheweb.com/")
 
 Image source: [http://www.evolutionoftheweb.com/](http://www.evolutionoftheweb.com/)
 
@@ -1630,7 +1661,7 @@ Offline development (aka offline first) is an area of knowledge and discussion a
 
 ### 3.39 - Learn Multi-Device Development
 
-![](assets/images/things.jpg "http://bradfrost.com/blog/post/this-is-the-web/")
+![](/imgs/things.jpg "http://bradfrost.com/blog/post/this-is-the-web/")
 
 Image source: [http://bradfrost.com/blog/post/this-is-the-web/](http://bradfrost.com/blog/post/this-is-the-web/)
 
@@ -1661,73 +1692,21 @@ This chapter highlights a few options for instructor directed learning via front
 
 The table below contains a small selection of instructor-led courses (i.e. programs, schools, and bootcamps). Use the table to get a general idea of what is available, the cost, duration, and locations of courses. (Be aware the information can change quickly)
 
-company
+| company | program | price estimate | on site | remote | duration |
+| -- | -- | -- | -- | -- | -- |
+|Betamore|Front-end Web Development | 3,000 | Baltimore, MD | | 10 weeks|
+|BLOC|Become a Front-end Developer|4,999||yes|16 weeks @ 25hr/wk or 32 weeks @ 10hr/wk|
+|General Assembly|Front-end Web Development|3,500|multiple locations||3 hrs/day 2 days/wk for 8 weeks|
+|Thinkful|Front-end Web Development|300 per month||yes|15 hrs/wk for 3 months|
+|Turing School of Software & Design|Front-End Engineering|20,000|Denver, CO	||7 months full time|
 
-program
+>**Notes:**
+>
+>1.  For a complete list of schools, courses, programs, and bootcamps to evaluate have a look at [switchup.org](https://www.switchup.org/front-end-development) or [coursereport.com](https://www.coursereport.com/tracks/front-end-developer-bootcamps).
 
-price estimate
-
-on site
-
-remote
-
-duration
-
-Betamore
-
-[Front-end Web Development](http://betamore.com/academy/front-end-web-development/)
-
-3,000
-
-Baltimore, MD
-
-10 weeks
-
-BLOC
-
-[Become a Front-end Developer](https://www.bloc.io/frontend-development-bootcamp)
-
-4,999
-
-yes
-
-16 weeks @ 25hr/wk or 32 weeks @ 10hr/wk
-
-General Assembly
-
-[Front-end Web Development](https://generalassemb.ly/education/front-end-web-development)
-
-3,500
-
-multiple locations
-
-3 hrs/day 2 days/wk for 8 weeks
-
-Thinkful
-
-[Front-end Web Development](http://www.thinkful.com/courses/learn-web-development-online)
-
-300 per month
-
-yes
-
-15 hrs/wk for 3 months
-
-Turing School of Software & Design
-
-[Front-End Engineering](https://www.turing.io/programs/front-end-engineering)
-
-20,000
-
-Denver, CO
-
-7 months full time
-
-**Notes:**
-
-1.  For a complete list of schools, courses, programs, and bootcamps to evaluate have a look at [switchup.org](https://www.switchup.org/front-end-development) or [coursereport.com](https://www.coursereport.com/tracks/front-end-developer-bootcamps).
 
 If you can't afford a directed education (can be very expensive), a self directed education using screencasts, books, and articles is a viable alternative to learn front-end development for the self-driven individual.
+
 
 Chapter 5. Front-end Dev Tools
 ------------------------------
@@ -1840,7 +1819,7 @@ Used to share limited amounts of immediately runnable code. Not a true code edit
 
 I recommending using [Visual Studio Code](https://code.visualstudio.com/) because of the quality of the tool and the continuous improvements made to the editor that likely won't stop or slow due to the fact that Microsoft is behind the tool. It is widely used:
 
-![](assets/images/vscode.png)
+![](/imgs/vscode.png)
 
 Image source: [https://2018.stateofjs.com/other-tools/text_editors](https://2018.stateofjs.com/other-tools/text_editors)
 
@@ -3018,7 +2997,8 @@ Chapter 6. Front-end Communities, Newsletters, News Sites, & Podcasts
 *   [http://fedsonslack.com/](http://fedsonslack.com)
 *   [front-end](https://spectrum.chat/frontend/) on spectrum.
 
-**Notes:**
 
-1.  Need more Newsletters, News Sites, & Podcasts look at [Awesome Newsletter](https://github.com/vredniy/awesome-newsletters).
+>**Notes:**
+>
+>1.  Need more Newsletters, News Sites, & Podcasts look at [Awesome Newsletter](https://github.com/vredniy/awesome-newsletters).
 2.  Find local front-end development communities by searching [https://www.meetup.com/](https://www.meetup.com/)
