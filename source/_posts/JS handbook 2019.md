@@ -148,19 +148,46 @@ Chapter 0. Recap of 2018 and Looking Forward
 ### 0.2 — In 2019, Expect...  展望2019。。。
 
 *   Hopefully, more of this to come. "[Stepping away from Sass](https://cathydutton.co.uk/posts/why-i-stopped-using-sass/)".
+*   有希望是的,类似"[远离Sass](https://cathydutton.co.uk/posts/why-i-stopped-using-sass/)"这样的声音越来越多了.
+
 *   Still a good idea to keep an eye on and learn about the up coming additions (and potential additions) to CSS via [https://cssdb.org](https://cssdb.org/)
+*   通过[https://cssdb.org](https://cssdb.org/)关注并学习即将到来的关于CSS的新增(实验性的)功能任然是个好主意.
+
 *   The [WebP](https://developers.google.com/speed/webp/) image format from Google could reach [support from all modern browsers this year](https://caniuse.com/#feat=webp).
+*   谷歌的[WebP](https://developers.google.com/speed/webp/)图像格式今年将会[兼容所有现代浏览器](https://caniuse.com/#feat=webp)
+
 *   [Prepack](https://prepack.io/) will continue to cook.
+*   [Prepack](https://prepack.io/)会继续维护.
+
 *   [GraphQL](https://graphql.org/) will continue to gain massive adoption.
+*   [GraphQL](https://graphql.org/)将会被大量使用.
+
 *   The, "[State of JavaScript](https://stateofjs.com/)" survey authors will add a "[State of CSS](https://stateofcss.com/)" survey in 2019.
+*   "[JavaScript现状调查](https://stateofjs.com/)"的作者会在2019年新增"[CSS现状调查](https://stateofcss.com/)".
+
 *   Keep an eye on [Web Animations API](https://caniuse.com/#feat=web-animation).
+*   留一个心眼在[网页动画API](https://caniuse.com/#feat=web-animation)上.
+
 *   Someone you know will try and convince you to use [TypeScript](https://www.typescriptlang.org/).
+*   你身边的人会尝试说服你使用[TypeScript](https://www.typescriptlang.org/).
+
 *   Babel will get some competition from [swc-project](https://github.com/swc-project/swc).
+*   Babel会和[swc-project](https://github.com/swc-project/swc)有些竞争.
+
 *   The case for, [JAMStack](https://jamstack.org/)'s will [continue](https://jamstackconf.com/nyc/).
+*   [JAMStack](https://jamstack.org/)的项目将继续下去。
+
 *   [Chasing the one code base to many platforms will continue.](https://quasar-framework.org)
+*   [追求代码多站合一的想法会继续.](https://quasar-framework.org)
+
 *   More developers will turn to languages like [ReasonML](https://www.imaginarycloud.com/blog/reasonml-react-as-first-intended/) over JavaScript/TypeScript for large code bases.
+*   对于大型代码库,许多开发者会转向[ReasonML](https://www.imaginarycloud.com/blog/reasonml-react-as-first-intended/)这样的语言中,而不是JavaScript或TypeScript.
+
 *   More, [largely used projects](https://github.com/twbs/bootstrap/pull/23586) will start to shed jQuery in favor of native DOM solutions.
+*   越来越多[的常用项目](https://github.com/twbs/bootstrap/pull/23586)会开始放弃JQuery转而使用原生DOM.
+
 *   [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)! At this point, I have no idea how Web Components will play out. Reality is they are not going away, and they have not gained a lot of momentum/usage once the hype ended.
+*   [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components)！ 目前我不知道Web Components将如何发挥作用。事实上是它并不会消失,并且一旦大肆宣传结束之后他们就不会获得很多关注度.
 
 * * *
 
