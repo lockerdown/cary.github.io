@@ -191,30 +191,38 @@ Chapter 0. Recap of 2018 and Looking Forward
 
 * * *
 
-Chapter 1. What Is a Front-end Developer?
+Chapter 1. What Is a Front-end Developer? 什么是前端开发者?
 -----------------------------------------
 
 This chapter provides a baseline explanation for front-end development and the front-end developer discipline.
+本章节会介绍前端开发的一些基本解释以及前端开发者的规则
 
 > Front-end web development, also known as client-side development is the practice of producing HTML, CSS and JavaScript for a website or Web Application so that a user can see and interact with them directly. The challenge associated with front end development is that the tools and techniques used to create the front end of a website change constantly and so the developer needs to constantly be aware of how the field is developing.
+> 前端开发（也称为客户端开发）是指那些用HTML,CSS和JavaScript编写网站或者网页应用的人.用户可以直接查看并与之交互.前端开发的挑战是:用于创建一个前端网站的工具和技术频繁更新，因此开发人员需要不断了解该领域的发展方向。
 > 
 > The objective of designing a site is to ensure that when the users open up the site they see the information in a format that is easy to read and relevant. This is further complicated by the fact that users now use a large variety of devices with varying screen sizes and resolutions thus forcing the designer to take into consideration these aspects when designing the site. They need to ensure that their site comes up correctly in different browsers (cross-browser), different operating systems (cross-platform) and different devices (cross-device), which requires careful planning on the side of the developer.
+> 设计一个站点的目的是,让用户打开一个站点获取信息更容易,更针对.事实上这件事远没有想象的那么容易.用户现在使用种类繁多的设备,不同的手机屏幕以及分辨率.这迫使设计师在设计的时候考虑到这些方面.他们需要确保他们的站点在不同的浏览器(跨浏览器),不同的操作系统(跨平台)和不同的设备(跨平台)都正确的显示.这需要站在开发人员方面仔细规划.
 > 
 > [https://en.wikipedia.org/wiki/Front-end\_web\_development](https://en.wikipedia.org/wiki/Front-end_web_development)
 
 ![](/imgs/what-is-front-end-dev.png "https://www.upwork.com/hiring/development/front-end-developer/") Image source: [https://www.upwork.com/hiring/development/front-end-developer/](https://www.upwork.com/hiring/development/front-end-developer/)
 
-#### A Front-end Developer...
+#### A Front-end Developer... 前端开发工程师
 
 A front-end developer architects and develops websites and web applications using web technologies (i.e., [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS), and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)), which typically runs on the [Open Web Platform](https://en.wikipedia.org/wiki/Open_Web_Platform) or acts as compilation input for non-web platform environments (i.e., [React Native](https://facebook.github.io/react-native/)).
+前端开发者使用web技术(比如[HTML](https://developer.mozilla.org/en-US/docs/Web/HTML), [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS),和[JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript))构建和开发网站和Web应用程序,这些网站和Web应用程序一般运行在[Open Web Platform](https://en.wikipedia.org/wiki/Open_Web_Platform)或在非Web平台(比如[React Native](https://facebook.github.io/react-native/)
 
 A person enters into the field of front-end development by learning to build a website or web application which relies on HTML, CSS, and JavaScript and commonly runs in a [web browser](https://en.wikipedia.org/wiki/Web_browser) but can also run in a [headless browser](https://en.wikipedia.org/wiki/Headless_browser), [WebView](http://developer.telerik.com/featured/what-is-a-webview/), or as compilation input for a native runtime environment. These four run times scenarios are explained below.
+一个人依赖HTML, CSS, and JavaScript来构建网站或web应用踏入前端领域.这些代码通常运行在[web浏览器](https://en.wikipedia.org/wiki/Web_browser),但也能运行在[无头浏览器](https://en.wikipedia.org/wiki/Headless_browser), [WebView](http://developer.telerik.com/featured/what-is-a-webview/)或者其他原生环境下.以上四种运行环境可以概括成以下内容:
 
 **Web Browsers (most common)**
+**web浏览器(最常见的)**
 
 A web browser is software used to retrieve, present, and traverse information on the [WWW](https://en.wikipedia.org/wiki/World_Wide_Web). Typically, browsers run on a desktop or laptop computer, tablet, or phone, but as of late a browser can be found on just about anything (i.e, on a fridge, in cars, etc.).
+web浏览器是一款用来检索，呈现和遍历[WWW](https://en.wikipedia.org/wiki/World_Wide_Web)信息的软件.浏览器通常运行在台式机或者笔记本,pad或者手机上.但是到目前为止，浏览器几乎可以在任何东西上找到(比如冰箱,汽车等等).
 
 The most common web browsers are (shown in order of [most used first](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables)):
+最常用的web浏览器有(按照[最常用](https://en.wikipedia.org/wiki/Usage_share_of_web_browsers#Summary_tables)排名):
 
 *   [Chrome](http://www.google.com/chrome/)
 *   [Safari](http://www.apple.com/safari/)
@@ -223,10 +231,13 @@ The most common web browsers are (shown in order of [most used first](https://en
 *   [Edge](https://www.microsoft.com/en-us/windows/microsoft-edge)
 
 **Headless Browsers**
+**无头浏览器**
 
 Headless browsers are a web browser **without** a graphical user interface that can be controlled from a command line interface programmatically for the purpose of web page automation (e.g., functional testing, scraping, unit testing, etc.). Think of headless browsers as a browser that you can run programmatically from the command line that can retrieve and traverse web page code.
+无头浏览器是一个没有用户界面的web浏览器.它可以被命令行界面控制,以实现前端自动化(比如功能测试,爬虫,单元测试等等).你可以将无头浏览器视为可以从命令行运行的浏览器，该命令行可以检索和遍历网页中的代码。
 
 The most common headless browsers are:
+最常见的无头浏览器有:
 
 *   [Headless Chromium](https://chromium.googlesource.com/chromium/src/+/lkgr/headless/README.md)
 *   [Zombie](https://github.com/assaf/zombie)
@@ -234,37 +245,47 @@ The most common headless browsers are:
 *   [puppeteer](https://github.com/GoogleChrome/puppeteer)
 
 **Webviews**
+**Webviews**
 
 [Webviews](http://developer.telerik.com/featured/what-is-a-webview/) are used by a native OS, in a native application, to run web pages. Think of a [webview](http://developer.telerik.com/featured/what-is-a-webview/) like an iframe or a single tab from a web browser that is embedded in a native application running on a device (e.g., [iOS](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/), [android](http://developer.android.com/reference/android/webkit/WebView.html), [windows](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webview.aspx)).
+[Webviews](http://developer.telerik.com/featured/what-is-a-webview/)会在原生系统上的原生程序中运行网页.[webview](http://developer.telerik.com/featured/what-is-a-webview/)就像一个嵌入原生程序中的iframe或像浏览器中单独的tab一样,运行在设备上.(比如[iOS](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIWebView_Class/), [android](http://developer.android.com/reference/android/webkit/WebView.html), [windows](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.webview.aspx))
 
 The most common solutions for [webview](http://developer.telerik.com/featured/what-is-a-webview/) development are:
+最常见的开发[webview](http://developer.telerik.com/featured/what-is-a-webview/)的解决方案有:
 
 *   [Cordova](https://cordova.apache.org/) (typically for native phone/tablet apps)
 *   [NW.js](https://github.com/nwjs/nw.js) (typically used for desktop apps)
 *   [Electron](http://electron.atom.io/) (typically used for desktop apps)
 
 **Native from Web Tech**
+**用web技术开发原生应用**
 
 Eventually, what is learned from web browser development can be used by front-end developers to craft code for environments that are not fueled by a browser engine (i.e. web platform). As of late, development environments are being dreamed up that use web technologies (e.g., CSS and JavaScript), without web engines, to create native applications.
+最终，前端开发人员可以使用从Web浏览器开发中学到的知识来为不受浏览器引擎（比如Web平台）牵制的环境编写代码。 最新的开发环境正在被设想为可以使用Web技术（例如，CSS和JavaScript）而不依赖Web引擎来创建原生程序。
 
 Some examples of these environments are:
+一些环境的例子:
 
 *   [Flutter](https://flutter.io/)
 *   [React Native](https://facebook.github.io/react-native/)
 *   [NativeScript](https://www.nativescript.org/)
 
 >**Notes:**
+>**注意**
 >
 >1.  Make sure you are clear what exactly is meant by the "web platform". Read the, ["Open Web Platform"](https://en.wikipedia.org/wiki/Open_Web_Platform) Wikipedia page. Explore [the many technologies](https://platform.html5.org/) that make up the web platform.
+>1. 确保你明确"web平台"的意义.阅读["Open Web Platform"](https://en.wikipedia.org/wiki/Open_Web_Platform)维基百科页面.探索构成web平台的[众多技术](https://platform.html5.org/)
 
-Chapter 2. The Practice of Front-end Development: Overview
+Chapter 2. The Practice of Front-end Development: Overview 前端开发实践:总览
 ----------------------------------------------------------
 
 This chapter will break down and broadly describes the practice of front-end engineering starting with, "How Front-End Developers Are Made".
+本章将从“前端开发人员如何炼成的”开始,分解并广泛地描述前端开发实践。
 
-### 2.1 - How Front-End Developers Are Made
+### 2.1 - How Front-End Developers Are Made 前端开发人员如何炼成的
 
 How exactly does one become a front-end developer? Well, it's complicated. Just consider this road map:
+一个人如何才能变成前端开发者?好吧,这比较困难,参考一下这张线路图:
 
 ![](/imgs/frontend.png "https://github.com/kamranahmedse/developer-roadmap")
 
