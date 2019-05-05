@@ -60,7 +60,7 @@ Chapter 0. Recap of 2018 and Looking Forward
 ### 0.1 — Recap of Front-end Development in 2018 回顾2018
 
 *   React had several notable releases this past year that included, [lifecycle methods](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes), [context API](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#official-context-api), [suspense](https://reactjs.org/docs/react-api.html#reactsuspense), and [React hooks](https://reactjs.org/docs/hooks-intro.html).
-*   React推出了许多牛逼的功能。比如：[lifecycle methods](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes)， [context API](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#official-context-api), [suspense](https://reactjs.org/docs/react-api.html#reactsuspense)，和[React hooks](https://reactjs.org/docs/hooks-intro.html)。
+*   React在过去的一年里推出了一些牛逼的功能。比如：[lifecycle methods](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes)， [context API](https://reactjs.org/blog/2018/03/29/react-v-16-3.html#official-context-api), [suspense](https://reactjs.org/docs/react-api.html#reactsuspense)，和[React hooks](https://reactjs.org/docs/hooks-intro.html)。
 
 *   [Microsoft buys Github](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/). Yeah, that happened.
 *   [微软收购了Github](https://news.microsoft.com/2018/06/04/microsoft-to-acquire-github-for-7-5-billion/)。
@@ -69,7 +69,7 @@ Chapter 0. Recap of 2018 and Looking Forward
 *   用CSS创建字体成为了[可能](https://yusugomori.com/projects/css-sans/)。(当然想创建中文字符估计还是不太现实。。)
 
 *   What I used to call front-end driven apps, gets labeled ["serverless"](https://thepowerofserverless.info/). Unfortunately, this term is [overloaded](owler.com/articles/serverless.html). However, the term [JAMstack](https://jamstack.org/) does seem to be [resonating](https://jamstackconf.com/nyc/) with developers.
-*   我以前提到前端驱动的app,现在被打上了["无服务器"](https://thepowerofserverless.info/)的标签。但不幸的是，他们的团队[撑不住了](owler.com/articles/serverless.html)。但是[JAMstack](https://jamstack.org/)团队看起来想帮助开发者重新开始。
+*   我以前提到前端驱动的app,现在被打上了["无服务器化"](https://thepowerofserverless.info/)的标签。但不幸的是，他们的团队[撑不住了](owler.com/articles/serverless.html)。但是[JAMstack](https://jamstack.org/)团队看起来想帮助开发者重新开始。
 [精读《Serverless 给前端带来了什么》](https://segmentfault.com/a/1190000018455041)
 
 *   Google offered some neat tools this year to help make webpages load faster, i.e. [squoosh](https://github.com/GoogleChromeLabs/squoosh/) and [quicklink](https://github.com/GoogleChromeLabs/quicklink).
@@ -115,7 +115,7 @@ Chapter 0. Recap of 2018 and Looking Forward
 *   许多人意识到E2E是一个很好的测试根基，大部分归功于[Cypress](https://www.cypress.io/how-it-works/) (Cypress排名靠前，然后是[Jest](https://jestjs.io/))在测试中发挥了很好的作用。
 
 *   While [Webpack](https://webpack.js.org/) was heavily used again this year, many developers found [Parcel](https://github.com/parcel-bundler/parcel) to be easier to get up and running.
-*   当[Webpack](https://webpack.js.org/)在今年流行的时候，许多开发者发现[Parcel](https://github.com/parcel-bundler/parcel)似乎更容易上手运行。
+*   当[Webpack](https://webpack.js.org/)在今年流行的时候，许多开发者发现[Parcel](https://github.com/parcel-bundler/parcel)似乎是开箱即用的。
 
 *   One of the most important questions asked this year was, what is the [cost of JavaScript](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4).
 *   今年问到的最重要的问题之一：[JavaScript存在的价值](https://medium.com/@addyosmani/the-cost-of-javascript-in-2018-7d8950fbb5d4)是什么。
@@ -151,7 +151,7 @@ Chapter 0. Recap of 2018 and Looking Forward
 *   有希望是的,类似"[远离Sass](https://cathydutton.co.uk/posts/why-i-stopped-using-sass/)"这样的声音越来越多了.
 
 *   Still a good idea to keep an eye on and learn about the up coming additions (and potential additions) to CSS via [https://cssdb.org](https://cssdb.org/)
-*   通过[https://cssdb.org](https://cssdb.org/)关注并学习即将到来的关于CSS的新增(实验性的)功能任然是个好主意.
+*   通过[https://cssdb.org](https://cssdb.org/)关注并学习即将到来的关于CSS的新增(潜在的)功能任然是个好主意.
 
 *   The [WebP](https://developers.google.com/speed/webp/) image format from Google could reach [support from all modern browsers this year](https://caniuse.com/#feat=webp).
 *   谷歌的[WebP](https://developers.google.com/speed/webp/)图像格式今年将会[兼容所有现代浏览器](https://caniuse.com/#feat=webp)
@@ -285,7 +285,7 @@ This chapter will break down and broadly describes the practice of front-end eng
 ### 2.1 - How Front-End Developers Are Made 前端开发人员如何炼成的
 
 How exactly does one become a front-end developer? Well, it's complicated. Just consider this road map:
-一个人如何才能变成前端开发者?好吧,这比较困难,参考一下这张线路图:
+一个人如何才能变成前端开发者?好吧,这比较复杂,参考一下这张线路图:
 
 ![](/imgs/frontend.png "https://github.com/kamranahmedse/developer-roadmap")
 
