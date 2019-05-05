@@ -292,6 +292,7 @@ How exactly does one become a front-end developer? Well, it's complicated. Just 
 Image source: [https://github.com/kamranahmedse/developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
 
 Today, in general, one can't go to college and expect to graduate with a degree in front-end engineering. And, I rarely hear of or meet front-end developers who suffered through what is likely a deprecated computer science degree or graphic design degree to end up writing HTML, CSS, and JavaScript professionally. From my perspective, most of the people working on the front-end today generally seem to be self-taught from the ground up or cross over into the front-end space from design or computer science fields.
+大体来说,如今没有一个人能够通过大学来获取前端开发工程师这一学位.我很少听到或遇到前端开发人员熟练编写HTML，CSS和JavaScript来得到无用的计算机科学学位或者是平面设计学位的.
 
 If you were to set out today to become a front-end developer I would loosely strive to follow the process outlined below (Chapter 3 and Chapter 4 will dive into more details on learning resources).
 
