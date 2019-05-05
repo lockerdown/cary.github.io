@@ -1,1 +1,7 @@
-# this is my blog & somewhere to writing weekly report
+# 使用Hexo搭配Travis搭建的博客
+
+## 分享一些技术以及复制周报的地方
+
+# TODO
+
+- [ ] 前端开发手册2019
