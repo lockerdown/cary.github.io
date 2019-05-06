@@ -298,7 +298,7 @@ If you were to set out today to become a front-end developer I would loosely str
 如果你今天的目标是成为前端开发人员,那我会推荐你往以下几个方面努力(第三章以及第四章会深入探讨有关学习资源的细节.)
 
 1.  Learn, roughly, how the [web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works) [platform](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work) works. Make sure you know the "what" and "where" of [HTML, CSS, DOM, JavaScript, Domains, DNS, URLs, HTTP, browsers, and servers/hosting](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web). Don't dive deep on anything just yet, just aim to understand the parts at play and how they loosely fit together. Start by building simple web pages.
-1. 大致了解[web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works),[platform](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)是如何工作的.确保你知道关于[HTML, CSS, DOM, JavaScript, Domains, DNS, URLs, HTTP, browsers, 和servers/hosting](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)的"含义"以及"用在哪里".
+1. 大致了解[web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works),[platform](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)是如何工作的.确保你知道关于[HTML, CSS, DOM, JavaScript, Domains, DNS, URLs, HTTP, browsers, 和servers/hosting](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)的"含义"以及"用在哪里".不要在刚开始的时候深入某一技术,你的目标是其中的一部分,以及它们是如何大致结合在一起的.从构建一些简单的网页开始.
 
 2.  [Learn HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
 2.  [学习HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
