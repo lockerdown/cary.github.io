@@ -130,7 +130,7 @@ Chapter 0. Recap of 2018 and Looking Forward
 *   大多数开发者通过[Apollo](https://www.apollographql.com/)发现并[认为](https://blog.bitsrc.io/why-does-everyone-love-graphql-17de7f99f05a)GraphQL是下一代数据API的潮流。
 
 *   Gulp and friends definitely took a back seat to [NPM/Yarn run](https://css-tricks.com/why-npm-scripts/). But this did not stop Microsoft from getting in the game with [Just](https://github.com/Microsoft/just).
-*   Gulp和他的朋友们已经通过[NPM/Yarn run](https://css-tricks.com/why-npm-scripts/)退居二线，但这并没有阻止Microsoft用[Just](https://github.com/Microsoft/just)来参与这场游戏。
+*   Gulp和他的朋友们已经通过被[NPM/Yarn run](https://css-tricks.com/why-npm-scripts/)调用退居二线，但这并没有阻止Microsoft用[Just](https://github.com/Microsoft/just)来参与这场游戏。
 
 *   This year, one can not only lint/hint HTML, CSS, and JavaScript they can [lint/hint the web](https://webhint.io) itself.
 *   今年，人们不仅仅可以lint/hint HTML，CSS，和JavaScript而且可以[lint/hint web页面](https://webhint.io)。
@@ -292,20 +292,41 @@ How exactly does one become a front-end developer? Well, it's complicated. Just 
 Image source: [https://github.com/kamranahmedse/developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
 
 Today, in general, one can't go to college and expect to graduate with a degree in front-end engineering. And, I rarely hear of or meet front-end developers who suffered through what is likely a deprecated computer science degree or graphic design degree to end up writing HTML, CSS, and JavaScript professionally. From my perspective, most of the people working on the front-end today generally seem to be self-taught from the ground up or cross over into the front-end space from design or computer science fields.
-大体来说,如今没有一个人能够通过大学来获取前端开发工程师这一学位.我很少听到或遇到前端开发人员熟练编写HTML，CSS和JavaScript来得到无用的计算机科学学位或者是平面设计学位的.
+大体来说,如今没有一个人能够通过大学来获取前端开发工程师这一学位.我很少听到或遇到前端开发人员熟练编写HTML，CSS和JavaScript来得到无用的计算机科学学位或者是平面设计学位的.依我看来,大多数人以前端开发者这个身份工作的,一般都是通过从头开始自学或是从计算机或者平面设计领取跨行转入的.
 
 If you were to set out today to become a front-end developer I would loosely strive to follow the process outlined below (Chapter 3 and Chapter 4 will dive into more details on learning resources).
+如果你今天的目标是成为前端开发人员,那我会推荐你往以下几个方面努力(第三章以及第四章会深入探讨有关学习资源的细节.)
 
 1.  Learn, roughly, how the [web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works) [platform](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work) works. Make sure you know the "what" and "where" of [HTML, CSS, DOM, JavaScript, Domains, DNS, URLs, HTTP, browsers, and servers/hosting](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web). Don't dive deep on anything just yet, just aim to understand the parts at play and how they loosely fit together. Start by building simple web pages.
+1. 大致了解[web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web/How_the_Web_works),[platform](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/How_does_the_Internet_work)是如何工作的.确保你知道关于[HTML, CSS, DOM, JavaScript, Domains, DNS, URLs, HTTP, browsers, 和servers/hosting](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web)的"含义"以及"用在哪里".
+
 2.  [Learn HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
+2.  [学习HTML](https://developer.mozilla.org/en-US/docs/Learn/HTML)
+
 3.  [Learn CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
+3.  [学习CSS](https://developer.mozilla.org/en-US/docs/Learn/CSS)
+
 4.  [Learn JavaScript](https://youtu.be/QjKH1J77gjI?list=PL055Epbe6d5bQubu5EWf_kUNA3ef_qbmL)
+4.  [学习JavaScript](https://youtu.be/QjKH1J77gjI?list=PL055Epbe6d5bQubu5EWf_kUNA3ef_qbmL)
+
 5.  Learn DOM
+5.  学习DOM
+
 6.  Learn the fundamentals of user interface design (i.e. UI patterns, interaction design, user experience design, and usability).
+6.  学习关于用户界面设计基本原理(比如UI组件,交互设计,用户体验设计以及可用性).
+
 7.  Learn CLI/command line
+7. 学习CLI/命令行
+
 8.  Learn the practice of software engineering (i.e., Application design/architecture, templates, Git, testing, monitoring, automating, code quality, development methodologies).
+8. 学习软件工程实例(比如应用程序设计/架构，模板，Git，测试，监控，自动化，代码质量，开发方法)
+
 9.  Get opinionated and customize your tool box with whatever makes sense to your brain (e.g. Webpack, React, and Mobx).
+9.  用自己的想法开发定制供自己使用的小工具(比如webpack,React,以及Mobx)
+
 10.  Learn Node.js
+10.  学习Node.js
+
 
 A short word of advice on learning. [Learn the actual underlying technologies, before learning abstractions.](https://youtu.be/QjKH1J77gjI?list=PL055Epbe6d5bQubu5EWf_kUNA3ef_qbmL) Don't learn jQuery, learn the DOM. Don't learn SASS, learn CSS. Don't learn JSX, learn HTML. Don't learn TypeScript, learn JavaScript. Don't learn Handlebars, learn JavaScript ES6 templates. Don't just use Bootstrap, learn UI patterns.
 
