@@ -329,12 +329,16 @@ If you were to set out today to become a front-end developer I would loosely str
 
 
 A short word of advice on learning. [Learn the actual underlying technologies, before learning abstractions.](https://youtu.be/QjKH1J77gjI?list=PL055Epbe6d5bQubu5EWf_kUNA3ef_qbmL) Don't learn jQuery, learn the DOM. Don't learn SASS, learn CSS. Don't learn JSX, learn HTML. Don't learn TypeScript, learn JavaScript. Don't learn Handlebars, learn JavaScript ES6 templates. Don't just use Bootstrap, learn UI patterns.
+关于学习的几句建议.[在学习抽象化知识前要先打好基础.](https://youtu.be/QjKH1J77gjI?list=PL055Epbe6d5bQubu5EWf_kUNA3ef_qbmL)先学DOM,再学jQuery.先学CSS,再学SASS.先学HTML,再学JSX.先学JavaScript,再学TypeScript.先学JavaScript ES6模板,再学Handlebars.先学UI设计,再学Bootstrap.
 
 Lately a lot of non-accredited, expensive, front-end code schools/bootcamps have emerged. These avenues of becoming a front-end developer are typically teacher directed courses, that follow a more traditional style of learning, from an official instructor (i.e., syllabus, test, quizzes, projects, team projects, grades, etc.).
+最近涌现出了许多非认证且昂贵的前端培训学校/训练营。这些成为前端开发人员的途径通常是来自官方讲师的教师指导课程（即教学大纲，考试，测验，项目，团队项目，成绩等），而这些课程遵循更传统的学习方式。
 
 Keep in mind, if you are considering an expensive training program, this is the web! Everything you need to learn is on the web for the taking, costing little to nothing. However, if you need someone to tell you how to take and learn what is low cost to free, and hold you accountable for learning it, you should consider a traditional instructor lead class room setting. Otherwise, I am not aware of any other profession that is practically free for the taking with an internet connection, a [couple of dollars a month for screencasting memberships](https://frontendmasters.com/join/), and a burning desire for knowledge.
+当你正在考虑要不要上昂贵的培训班时，要记住，现在是信息化时代。任何你需要学习的东西都在网上，甚至不需要花一分钱。但如果你需要某人告诉你如何去获取并学习免费的低成本资源，并且对你的学习负责，那你应该考虑传统的教室讲课模式。你只需要[每月几美元的会员](https://frontendmasters.com/join/)以及对知识的强烈渴望，就能很便宜的通过网络来学习，我不知道还有什么其他职业是这样的。
 
 For example, if you want to get going today, consuming one or more of the following self-directed resources below can work:
+举例来说，如果你今年就想开始，那么考虑以下一个或多个自学课程：
 
 *   [Getting started with the Web](https://developer.mozilla.org/en-US/docs/Learn/Getting_started_with_the_web) \[read\]
 *   [So, You Want to be a Front-End Engineer](https://www.youtube.com/watch?v=Lsg84NtJbmI) \[watch\]
@@ -346,10 +350,12 @@ For example, if you want to get going today, consuming one or more of the follow
 *   [freeCodeCamp](https://learn.freecodecamp.org/) \[interactive\]\[watch\]
 
 When getting your start, you should fear most things that conceal complexity. Abstractions (e.g. jQuery) in the wrong hands can give the appearance of advanced skills, while all the time hiding the fact that a developer has an inferior understanding of the basics or underlying concepts.
+一开始，你应该害怕大多数掩盖复杂性的事情，掉入抽象化（比如 jQuery）的怪圈会导致看起来掌握了高级技巧，实际上却隐藏了开发人员对基础知识或基本概念的缺失。
 
 It is assumed that on this journey you are not only learning, but also doing as you learn and investigate tools. Some suggest only doing to learn. While others suggest only learning about doing. I suggest you find a mix of both that matches how your brain works and do that. But, for sure, it is a mix! So, don't just read about it, do it. Learn, do. Learn, do. Repeat indefinitely because things change fast. This is why learning the fundamentals, and not abstractions, are so important.
+假设这段旅程中，你不光需要学习知识而且还需要研究相应工具。有人建议你只需要学习知识。其他人建议你只需要成果。而我则建议你找到你大脑的一个平衡点。但是，当然这是一个混合，不要光做不练。要一直重复学习，实践。因为现在知识日新月异，所以这就是为什么要学习基础知识而不是抽象化应用。这点很重要。
 
-### 2.2 - Front-End Job Titles
+### 2.2 - Front-End Job Titles 前端开发职称
 
 [A great divide has been brewing in the front-end developer space for several years between two very different types of so-called front-end developers](https://css-tricks.com/the-great-divide/). On the one side, you have JavaScript-focused programmers who write JavaScript for front-end runtimes that likely have computer science skills with a software development history. They more than likely view HTML and CSS as an abstraction (i.e. [JSX](https://reactjs.org/docs/introducing-jsx.html) and [CSS in JS](https://hackernoon.com/all-you-need-to-know-about-css-in-js-984a72d48ebc)). On the other side, you have, most likely, non-computer science educated developers who focus on HTML, CSS, and JavaScript as it specifically pertains to the UI. In 2019, when entering or trying to understand the front-end developer space you will absolutely feel this divide. The term front-end developer is on the verge of meaninglessness without clarifying words to address what type of front-end developer is being discussed.
 
