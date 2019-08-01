@@ -27,6 +27,8 @@ ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会）通
 
 # babel是如何运行的
 
+首先我们来看一下babel内部依赖了哪些库:
+
 ## 核心包
 
 - babel-core：babel转译器本身，提供了babel的转译API，如babel.transform等，用于对代码进行转译。像webpack的babel-loader就是调用这些API来完成转译过程的。
@@ -49,3 +51,169 @@ ECMAScript是一种由Ecma国际（前身为欧洲计算机制造商协会）通
 
 - babel-cli：babel的命令行工具，通过命令行对js代码进行转译
 - babel-register：通过绑定node.js的require来自动转译require引用的js代码文件
+
+其实babel的作用和浏览器解析js,解析css的模式相同,都是用解析器来拆分各个单词,数字,符号等,然后应用语法规则.接下来词法分析器则把一些无关的空格字符去除,构建成抽象语法树.最后则用babel-generator生成代码.
+
+至于其他一些包感兴趣的可以自己了解一下.
+
+那么回到这次的主题:为什么我们项目中不能解析async呢?
+
+其实原因很简单,就是因为babel-core的版本选择的有问题,所以对一些高版本的语法并不支持.
+
+那么我们先来看一下如果在官方的[转换工具中](https://babeljs.io/repl),一个纯正的async await方法会变成什么样子的.
+
+``` javascript
+
+async function test(){
+  const sleep = m => new Promise(r => setTimeout(r, m))
+  await sleep(1000)
+  console.log('await');
+}
+test();
+
+```
+
+转换后(部分代码已经精简)
+
+``` javascript
+"use strict";
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) {
+  if (info.done) {
+    resolve(value);
+  } else {
+    Promise.resolve(value).then(_next, _throw);
+  }
+}
+
+function _asyncToGenerator(fn) {
+    return new Promise(function(resolve, reject) {
+      var gen = fn.apply(self, args);
+      function _next(value) {
+        asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value);
+      }
+      _next(undefined);
+    });
+}
+
+function test() {
+  return _test.apply(this, arguments);
+}
+
+function _test() {
+  _test = _asyncToGenerator(
+    /*#__PURE__*/
+    regeneratorRuntime.mark(function _callee() {
+      var sleep;
+      return regeneratorRuntime.wrap(function _callee$(_context) {
+        while (1) {
+          switch ((_context.prev = _context.next)) {
+            case 0:
+              sleep = function sleep(m) {
+                return new Promise(function(r) {
+                  return setTimeout(r, m);
+                });
+              };
+
+              _context.next = 3;
+              return sleep(1000);
+
+            case 3:
+              console.log("await");
+
+            case 4:
+            case "end":
+              return _context.stop();
+          }
+        }
+      }, _callee);
+    })
+  );
+  return _test.apply(this, arguments);
+}
+
+test();
+
+```
+
+其实这段转换后的代码也兼容了es2015,如果不勾选的话会出现Generator函数以及yield,我就一步到位全都勾上了.可以看到整个函数是被_asyncToGenerator方法封装后抛出一个switch case函数,初步可以判断是根据不同的条件进行不同的操作.
+
+但是实际运行发现报错了,提示`regeneratorruntime is not defined`,看了下代码,发现这个方法babel并没有帮我生成,看来是要自己引入了.话不多说直接`yarn add regenerator-runtime`就可以了.
+
+那我们再看一下`regenerator-runtime`这个包吧.
+
+
+
+```javascript
+function Generator() {}
+function GeneratorFunction() {}
+function GeneratorFunctionPrototype() {}
+
+...
+
+var Gp = GeneratorFunctionPrototype.prototype =
+  Generator.prototype = Object.create(IteratorPrototype);
+
+GeneratorFunction.prototype = Gp.constructor = GeneratorFunctionPrototype;
+
+GeneratorFunctionPrototype.constructor = GeneratorFunction;
+
+GeneratorFunctionPrototype[toStringTagSymbol] =
+GeneratorFunction.displayName = "GeneratorFunction";
+
+```
+
+这段代码构建了一堆看起来很复杂的关系链，其实这是参照着`ES6规范`(https://link.juejin.im/?target=https%3A%2F%2Fwww.ecma-international.org%2Fecma-262%2F6.0%2F%23sec-generatorfunction-constructor)构建的关系链:
+
+![](/imgs/generator.jpg)
+
+
+这个包抛出了8个方法,我们选其中用到的方法
+
+- mark
+- wrap
+
+来分析一下各自的作用.
+
+#### mark
+
+```javascript
+  exports.mark = function(genFun) {
+    genFun.__proto__ = GeneratorFunctionPrototype;
+    genFun.prototype = Object.create(Gp);
+    return genFun;
+  };
+```
+
+可以看出,mark的主要作用就是保证传入的方法的作用域以及原型指向是和Gp这个变量一致的.
+
+而Gp则是一个生成器函数,生成器挂载了3个方法,分别是next,return和throw.
+
+next返回一个由yield表达式生成的值.
+return返回给定的值并结束生成器.
+throw向生成器抛出一个错误.
+
+#### wrap
+
+```javascript
+
+  function wrap(innerFn, outerFn, self, tryLocsList) {
+    var protoGenerator = outerFn && outerFn.prototype instanceof Generator ? outerFn : Generator;
+    var generator = Object.create(protoGenerator.prototype);
+    var context = new Context(tryLocsList || []);
+    generator._invoke = makeInvokeMethod(innerFn, self, context);
+    return generator;
+  }
+
+```
+
+通过代码可以看出,我们传进去的_callee$就是innerFn,这个innerFn通过makeInvokeMethod方法创造了和刚刚make相同的3个方法.
+
+而context相当于一个全局变量,存放着当前方法的运行环境,比如next表示下一步运行哪行代码,done表示promise是否结束,finish则表示当前函数是否全部走完.
+
+根据asyncGeneratorStep方法来看,通过info.done是否为true来判断当前的方法是否结束,从而可以重新开一个promise来阻断进程.
+
+
+# 总结
+
+其实不管是async还是generator,其实返回的都是promise,由此可见,promise对我们日常的开发有多么重要.
