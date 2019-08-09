@@ -163,7 +163,7 @@ GeneratorFunction.displayName = "GeneratorFunction";
 
 ```
 
-这段代码构建了一堆看起来很复杂的关系链，其实这是参照着`ES6规范`(https://link.juejin.im/?target=https%3A%2F%2Fwww.ecma-international.org%2Fecma-262%2F6.0%2F%23sec-generatorfunction-constructor)构建的关系链:
+这段代码构建了一堆看起来很复杂的关系链，其实这是参照着`ES6规范`(https://www.ecma-international.org/ecma-262/6.0/#sec-generatorfunction-constructor)构建的关系链:
 
 ![](/imgs/generator.jpg)
 
