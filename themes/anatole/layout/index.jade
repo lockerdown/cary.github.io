@@ -3,7 +3,6 @@ block content
 	.autopagerize_page_element: .content
 		- page.posts.each(function (item) {
 			- var tag = item.tags;
-			- console.log(!tag.data.some(item=>item.name === 'weekly'))
 			if !tag.data.some(item=>item.name === 'weekly')
 				include mixins
 				+make_post(item, false)
