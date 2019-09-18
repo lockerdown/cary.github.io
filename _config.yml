@@ -67,7 +67,7 @@ pagination_dir: page
 theme: anatole
 # Header
 archive_generator:
-  per_page: 0
+  per_page: 10
   yearly: false
   monthly: false
   daily: false
