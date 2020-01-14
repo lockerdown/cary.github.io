@@ -11,13 +11,13 @@ tags: 技术
 {
   "name": "test", // 包名
   "version": "1.1.1", // 版本号,可以通过npm version major | minor | patch 对应{x.y.z}版本
-  "main": "lib/tcgl-ui.common.js", // 入口文件
+  "main": "lib/app.common.js", // 入口文件
   "description": "这是描述",  // 项目的描述
   "author": "Cary", // 作者
   "miniprogram": "dist/mpsrc", // 小程序编译出来后制定的目录
   "private": false, // 是否为私人库 如果是私人库的话 npm publish 不能发布
   "publishConfig": {
-    "registry": "http://nexus.17usoft.com/repository/npm-tcgl/" // 指定publish发布的路径
+    "registry": "http://xxx.com/repository/xxx/" // 指定publish发布的路径,通常对应内网
   },
   "files": [ // 需要打包的目录
     "dist",
@@ -46,10 +46,6 @@ tags: 技术
     // ^version 与当前版本兼容
   "dependencies": {}, 
   "devDependencies": { // 仅在开发阶段使用的包而不打包打正式文件中
-    "@tinajs/mina-entry-webpack-plugin": "^1.1.1",
-    "@tinajs/mina-loader": "^1.5.1",
-    "@tinajs/mina-runtime-webpack-plugin": "^1.2.1",
-    "@tinajs/wxs-loader": "^1.2.1",
     "@vue/cli-plugin-babel": "^3.7.0",
     "@vue/cli-plugin-eslint": "^3.7.0",
     "@vue/cli-service": "^3.7.0",
