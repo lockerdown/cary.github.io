@@ -1,7 +1,7 @@
 ---
 title: promise函数
 date: 2017-06-02 17:21:10
-tags:
+tags: weekly
 ---
 
 

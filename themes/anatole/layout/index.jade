@@ -1,11 +1,19 @@
 extends partial/layout
 block content
 	.autopagerize_page_element: .content
-		- page.posts.each(function (item) {
-			- var tag = item.tags;
-			if !tag.data.some(item=>item.name === 'weekly')
+	
+		each post, index in page.posts.toArray()
+			- var isTop = post.isTop;
+			if isTop
 				include mixins
-				+make_post(item, false)
-		- })
+				+make_post(post, false)
+
+		each post, index in page.posts.toArray()
+			- let tags = post.tags.toArray();
+			- var isTop = post.isTop;
+			if !(tags[0]&&tags[0].name === 'weekly' || isTop)
+				include mixins
+				+make_post(post, false)
+
 		include mixins
 		+make_pager(__('prev'), __('next'))
