@@ -3,7 +3,7 @@
 language: node_js
 cache: yarn
 node_js:
-  - "10"  # nodejs的版本
+  - "12"  # nodejs的版本
 branches:
   only:
   - hexo  # 设置自动化部署的分支
