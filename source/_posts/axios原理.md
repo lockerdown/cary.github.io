@@ -3,7 +3,6 @@ title: axios原理
 date: 2020-03-24 10:38:56
 tags: 技术
 ---
-
 ## axios是什么
 
 axios是一个基于promise的http库,可以允许在浏览器和node环境中.
