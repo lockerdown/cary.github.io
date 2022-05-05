@@ -25,7 +25,7 @@ jobs:
           node-version: '14'
 
       - name: Install global dependencies
-        run: yarn global install hexo-cli
+        run: yarn global add hexo-cli
 
       - name: Install project dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
