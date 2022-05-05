@@ -32,4 +32,4 @@ jobs:
         run: yarn
 
       - name: Generator
-        run: hexo clean && hexo g -d
+        run: yarn run clean && hexo clean && hexo g -d

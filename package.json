@@ -6,7 +6,8 @@
     "version": "5.4.2"
   },
   "scripts": {
-    "watch": "hexo generate --watch"
+    "watch": "hexo generate --watch",
+    "clean": "rm -rf .deploy_git"
   },
   "dependencies": {
     "hexo": "^5.4.0",
