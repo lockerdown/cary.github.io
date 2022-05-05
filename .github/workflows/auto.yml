@@ -9,10 +9,10 @@ on:
     branches: [ hexo ]
   pull_request:
     branches: [ hexo ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
-
+env:
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+  DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
 
 jobs:
   build:
