@@ -23,10 +23,13 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '14'
-          
+
+      - name: Install global dependencies
+        run: yarn global install hexo-cli
+
       - name: Install project dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
         run: yarn
-        
+
       - name: Generator
         run: hexo clean && hexo g -d
