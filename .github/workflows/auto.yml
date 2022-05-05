@@ -31,7 +31,7 @@ jobs:
         if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
         run: yarn
 
-      -name: Set user
+      - name: Set user
         run: git config --global user.name 'Cary' && git config --global user.email 'carynihility@gmail.com'
 
       - name: Generator
