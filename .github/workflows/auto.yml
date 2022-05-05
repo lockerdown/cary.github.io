@@ -30,8 +30,9 @@ jobs:
       - name: Install project dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true' # Over here!
         run: yarn
+
       -name: Set user
-        run: git config --global user.name "Cary" && git config --global user.email "carynihility@gmail.com"
-        
+        run: git config --global user.name 'Cary' && git config --global user.email 'carynihility@gmail.com'
+
       - name: Generator
         run: yarn run clean && hexo clean && hexo g -d
