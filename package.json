@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "private": true,
   "hexo": {
-    "version": "3.9.0"
+    "version": "5.4.2"
   },
   "scripts": {
-    "watch": "hexo generate --watch"
+    "watch": "hexo generate --watch",
+    "clean": "rm -rf .deploy_git"
   },
   "dependencies": {
-    "hexo": "^3.9.0",
+    "hexo": "^5.4.0",
     "hexo-deployer-git": "^1.0.0",
     "hexo-deployer-heroku": "0.1.1",
     "hexo-deployer-openshift": "^0.1.1",
@@ -25,5 +26,8 @@
     "hexo-renderer-marked": "^0.3.2",
     "hexo-renderer-stylus": "^0.3.3",
     "hexo-server": "^0.3.3"
+  },
+  "devDependencies": {
+    "hexo-cli": "^4.3.0"
   }
 }
