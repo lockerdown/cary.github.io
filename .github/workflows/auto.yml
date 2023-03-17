@@ -22,7 +22,8 @@ jobs:
       - name: Use Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: '12'
+          persist-credentials: false
+          node-version: '14'
 
       - name: Install global dependencies
         run: yarn global add hexo-cli
