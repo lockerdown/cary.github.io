@@ -1,0 +1,82 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Cary Yang,carynihility@gmail.com"><title>webpack原理拾遗 · 黑胖子的博客</title><meta name="description" content="今天开始按照webpack文档学习一遍,遇到一些重点难点就记录下来entry单入口以及多入口
+chunk以及vendor:
+
+使用CommonsChunkPlugin从「应用程序 bundle」中提取 vendor 引用(vendor reference) 到 vendor bundle
+ 什么是b"><meta name="keywords" content="Angular, Babel, CLI, CSS-in-JS, Gatsby, GraphQL, JavaScript, React, TypeScript, WebAssembly, github, npm, vue, webpack, 服务端渲染, JavaScript, 前端工具资源"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta content="codeva-omByo1T2Oa" name="baidu-site-verification"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- Global site tag (gtag.js) - Google Analytics --><script src="https://www.googletagmanager.com/gtag/js?id=G-8T3DP764SR"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-8T3DP764SR');</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">黑胖子的博客</a></h3><div class="description"><p>The sun is the nihility in your delusion eyes.</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/yangyichen"><i class="fa fa-github"></i></a></li><li><a target="_blank" rel="noopener" href="http://instagram.com/nihility__"><i class="fa fa-instagram"></i></a></li><li><a href="/atom.xml"><i class="fa fa-rss"></i></a></li></ul><div class="footer"><a target="_blank" href="javascript:;"><span>Theme by</span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai</a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li><li><a href="/tags/weekly">周报</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" class="fa fa-chevron-left"></a></li></div><div class="avatar"><img src="https://img1.doubanio.com/icon/ul50179052-8.jpg"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>webpack原理拾遗</a></h3></div><div class="post-content"><h1 id="今天开始按照webpack文档学习一遍-遇到一些重点难点就记录下来"><a href="#今天开始按照webpack文档学习一遍-遇到一些重点难点就记录下来" class="headerlink" title="今天开始按照webpack文档学习一遍,遇到一些重点难点就记录下来"></a>今天开始按照<a target="_blank" rel="noopener" href="https://webpack.docschina.org/">webpack文档</a>学习一遍,遇到一些重点难点就记录下来</h1><h2 id="entry"><a href="#entry" class="headerlink" title="entry"></a>entry</h2><p>单入口以及多入口</p>
+<p>chunk以及vendor:</p>
+<ul>
+<li>使用<code>CommonsChunkPlugin</code>从「应用程序 bundle」中提取 vendor 引用(vendor reference) 到 vendor bundle<ul>
+<li style="list-style: none"><input type="checkbox"></input> 什么是<code>bundle</code>?</li>
+</ul>
+</li>
+<li>引用 vendor 的部分替换为 <code>__webpack_require__()</code></li>
+<li><a target="_blank" rel="noopener" href="http://web.jobbole.com/95110/">长效缓存</a><ul>
+<li>CachePlugin, RecordId</li>
+</ul>
+</li>
+</ul>
+<h2 id="output"><a href="#output" class="headerlink" title="output"></a>output</h2><p>值为对象且至少包含:</p>
+<ul>
+<li>filename 用于输出文件的文件名。</li>
+<li>目标输出目录 path 的绝对路径。</li>
+</ul>
+<p>占位符(substitutions)可以输出多个文件</p>
+<ul>
+<li style="list-style: none"><input type="checkbox"></input> 占位符原理?</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">output</span>: &#123;</span><br><span class="line">    <span class="attr">filename</span>: <span class="string">&#x27;[name].js&#x27;</span>,</span><br><span class="line">    <span class="attr">path</span>: __dirname + <span class="string">&#x27;/dist&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="mode"><a href="#mode" class="headerlink" title="mode"></a>mode</h2><p>mode 的默认值是 production。<br>只设置 NODE_ENV 时，不会自动设置 mode。<br>可以根据不同环境编译不同js 目前基本通过webpack.[不同环境].config.js来区分</p>
+<h2 id="loader"><a href="#loader" class="headerlink" title="loader"></a>loader</h2><p><code>loader 用于对模块的源代码进行转换</code><br>有三种使用 loader 的方式：</p>
+<ul>
+<li>配置（推荐）：在 webpack.config.js 文件中指定 loader。</li>
+<li>内联：在每个 import 语句中显式指定 loader。</li>
+<li>CLI：在 shell 命令中指定它们。</li>
+</ul>
+<p>基本都只用第一种,其余可以不关注.可能只是在测试某个loader的时候需要用到.</p>
+<p>loader写法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">module</span>: &#123;</span><br><span class="line">    <span class="attr">rules</span>: [</span><br><span class="line">      &#123;</span><br><span class="line">        <span class="attr">test</span>: <span class="regexp">/\.css$/</span>,</span><br><span class="line">        <span class="attr">use</span>: [</span><br><span class="line">          &#123; <span class="attr">loader</span>: <span class="string">&#x27;style-loader&#x27;</span> &#125;,</span><br><span class="line">          &#123;</span><br><span class="line">            <span class="attr">loader</span>: <span class="string">&#x27;css-loader&#x27;</span>,</span><br><span class="line">            <span class="attr">options</span>: &#123;</span><br><span class="line">              <span class="attr">modules</span>: <span class="literal">true</span></span><br><span class="line">            &#125;</span><br><span class="line">          &#125;</span><br><span class="line">        ]</span><br><span class="line">      &#125;</span><br><span class="line">    ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>loader特性:</p>
+<ul>
+<li>支持链式传递,通过callback</li>
+<li>执行顺序为从右到左,从下到上</li>
+<li>可以指定include以及exclude文件</li>
+<li style="list-style: none"><input type="checkbox"></input> loader 接收查询参数(什么意思?)</li>
+<li>可以返回一个或多个结果,第一个为处理好后的内容,第二个可选,为可当做source map的对象</li>
+</ul>
+<h2 id="resolveLoader"><a href="#resolveLoader" class="headerlink" title="resolveLoader"></a>resolveLoader</h2><p>通常我们可以通过yarn安装已经发布的包,但是本地开发loader的时候就可以指定loader的目录</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">resolveLoader</span>: &#123;</span><br><span class="line">    <span class="comment">// 匹配的目录</span></span><br><span class="line">    <span class="attr">modules</span>: [ <span class="string">&#x27;node_modules&#x27;</span> ],</span><br><span class="line">    <span class="comment">// 匹配的后缀</span></span><br><span class="line">    <span class="attr">extensions</span>: [ <span class="string">&#x27;.js&#x27;</span>, <span class="string">&#x27;.json&#x27;</span> ],</span><br><span class="line">    <span class="comment">// 指定读取的package.json字段名</span></span><br><span class="line">    <span class="attr">mainFields</span>: [ <span class="string">&#x27;loader&#x27;</span>, <span class="string">&#x27;main&#x27;</span> ],</span><br><span class="line">    <span class="comment">// loader的扩展名,如包名为foo-loader,则可省略-loader,直接为foo</span></span><br><span class="line">    <span class="attr">moduleExtensions</span>: [ <span class="string">&#x27;-loader&#x27;</span> ]</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="plugins"><a href="#plugins" class="headerlink" title="plugins"></a>plugins</h2><p>目前有很多插件可以使用,具体看<a target="_blank" rel="noopener" href="https://webpack.docschina.org/plugins/">webpack插件</a></p>
+<p>plugin必须是一个Class函数,并具有apply方法能被webpack注入.</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="title function_">apply</span>(<span class="params">compiler</span>) &#123;</span><br><span class="line">    compiler.<span class="property">hooks</span>.<span class="property">run</span>.<span class="title function_">tap</span>(pluginName, <span class="function"><span class="params">compilation</span> =&gt;</span> &#123;</span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;webpack 构建过程开始！&#x27;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>plugin可以通过<code>new</code>构建并传入参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">plugins</span>: [</span><br><span class="line">    <span class="keyword">new</span> <span class="title class_">HtmlWebpackPlugin</span>(&#123;<span class="attr">template</span>: <span class="string">&#x27;./src/index.html&#x27;</span>&#125;)</span><br><span class="line">  ]</span><br></pre></td></tr></table></figure>
+<ul>
+<li style="list-style: none"><input type="checkbox"></input> 插件原理后续补上</li>
+</ul>
+<h2 id="target"><a href="#target" class="headerlink" title="target"></a>target</h2><p>支持的传入参数:</p>
+<ul>
+<li>string<ul>
+<li>web(默认)</li>
+<li>node</li>
+<li>async-node</li>
+</ul>
+</li>
+<li>function<ul>
+<li>传入自定义方法</li>
+</ul>
+</li>
+</ul>
+<h2 id="其他文档"><a href="#其他文档" class="headerlink" title="其他文档"></a>其他文档</h2><p><a href="./2018/12/10/webpack loader详解">webpack loader详解</a><br><!-- [webpack plugin详解](./webpack plugin详解)--></p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-12-07</span><i class="fa fa-comment-o"></i><a href="/2018/12/07/webpack%E5%8E%9F%E7%90%86%E6%8B%BE%E9%81%97/#comments">评论</a><i class="fa fa-tag"></i><a href="/tags/webpack/" title="webpack" class="tag">webpack </a></div></div></div></div><div class="share"><div class="evernote"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></div><div class="weibo"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></div><div class="twitter"><a target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://cary.im/2018/12/07/webpack原理拾遗/,黑胖子的博客,webpack原理拾遗,;" class="fa fa-twitter"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a role="navigation" href="/2018/12/10/webpack%20loader%E8%AF%A6%E8%A7%A3/" title="webpack loader详解" class="btn">上一篇</a></li><li class="next pagbuttons"><a role="navigation" href="/2018/11/14/vue-cli3.0%E6%9B%B4%E6%96%B0/" title="vue cli" class="btn">下一篇</a></li></ul></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'heipangzi';
+var disqus_identifier = '2018/12/07/webpack原理拾遗/';
+var disqus_title = 'webpack原理拾遗';
+var disqus_url = 'https://cary.im/2018/12/07/webpack原理拾遗/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//heipangzi.disqus.com/count.js" async></script></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>

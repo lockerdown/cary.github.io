@@ -1,0 +1,32 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Cary Yang,carynihility@gmail.com"><title>周报 · 黑胖子的博客</title><meta name="description" content="本周主要任务测试以及修改bug
+主要遇到问题本周主要修改了几个bug
+
+目的地大全搜索结果去重以及优先级覆盖,增加redis缓存
+个人中心样式修改
+关于早期用户只绑定了MemberId,增加wxMemberId的兼容
+
+本周空余时间比较多,所以研究了一下关于代码检测的东西
+代码检测工具:mocham"><meta name="keywords" content="Angular, Babel, CLI, CSS-in-JS, Gatsby, GraphQL, JavaScript, React, TypeScript, WebAssembly, github, npm, vue, webpack, 服务端渲染, JavaScript, 前端工具资源"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta content="codeva-omByo1T2Oa" name="baidu-site-verification"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- Global site tag (gtag.js) - Google Analytics --><script src="https://www.googletagmanager.com/gtag/js?id=G-8T3DP764SR"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-8T3DP764SR');</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">黑胖子的博客</a></h3><div class="description"><p>The sun is the nihility in your delusion eyes.</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/yangyichen"><i class="fa fa-github"></i></a></li><li><a target="_blank" rel="noopener" href="http://instagram.com/nihility__"><i class="fa fa-instagram"></i></a></li><li><a href="/atom.xml"><i class="fa fa-rss"></i></a></li></ul><div class="footer"><a target="_blank" href="javascript:;"><span>Theme by</span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai</a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li><li><a href="/tags/weekly">周报</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" style="display:none;" class="fa fa-chevron-left"></a></li></div><div class="avatar"><img src="https://img1.doubanio.com/icon/ul50179052-8.jpg"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>周报</a></h3></div><div class="post-content"><h4 id="本周主要任务"><a href="#本周主要任务" class="headerlink" title="本周主要任务"></a>本周主要任务</h4><p>测试以及修改bug</p>
+<h4 id="主要遇到问题"><a href="#主要遇到问题" class="headerlink" title="主要遇到问题"></a>主要遇到问题</h4><p>本周主要修改了几个bug</p>
+<ul>
+<li>目的地大全搜索结果去重以及优先级覆盖,增加redis缓存</li>
+<li>个人中心样式修改</li>
+<li>关于早期用户只绑定了MemberId,增加wxMemberId的兼容</li>
+</ul>
+<p>本周空余时间比较多,所以研究了一下关于代码检测的东西</p>
+<h5 id="代码检测工具-mocha"><a href="#代码检测工具-mocha" class="headerlink" title="代码检测工具:mocha"></a>代码检测工具:mocha</h5><p>mocha配合断言库chai基本上对于vue是通吃的,但是需要额外的学习成本以及精力去写这些判断,但是对于测试来说可能不用一遍一遍的重复测试了.如果有可能的话可以推行一下.</p>
+<h5 id="强制类型编程-typeScript和flow"><a href="#强制类型编程-typeScript和flow" class="headerlink" title="强制类型编程:typeScript和flow"></a>强制类型编程:typeScript和flow</h5><p>经过我的一番试验,首先排除了ts,因为ts需要改的东西太多了,ts是一个相当于运行环境的东西.需要把vue所有的写法都改变从而达到检测的目的,但是flow可以基本无缝对接,只需要babel上加几个包就行了,在需要转换类型的文件上加上<code>// @flow</code>就能对当前文件进行检测而且可以通过控制台实时看到类型错误的问题.<br>但是flow对vue文件的兼容不是太好,需要hack比较麻烦.</p>
+<h4 id="下周任务"><a href="#下周任务" class="headerlink" title="下周任务"></a>下周任务</h4><p>等小程序上线,暂时没有任务</p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2018-09-07</span><i class="fa fa-comment-o"></i><a href="/archived/2018-09-07weekly.html#comments">评论</a><i class="fa fa-tag"></i></div></div></div></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'heipangzi';
+var disqus_identifier = 'archived/2018-09-07weekly.html';
+var disqus_title = '周报';
+var disqus_url = 'https://cary.im/archived/2018-09-07weekly.html';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//heipangzi.disqus.com/count.js" async></script></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>

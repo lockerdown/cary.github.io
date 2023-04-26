@@ -1,0 +1,78 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Cary Yang,carynihility@gmail.com"><title>chrome cookie限制 · 黑胖子的博客</title><meta name="description" content="chrome cookie 限制Strict123Set-Cookie: CookieName=CookieValue; SameSite=Strict;
+Lax123Set-Cookie: CookieName=CookieValue; SameSite=Lax;
+
+
+
+请求类型
+示例
+正常情况
+"><meta name="keywords" content="Angular, Babel, CLI, CSS-in-JS, Gatsby, GraphQL, JavaScript, React, TypeScript, WebAssembly, github, npm, vue, webpack, 服务端渲染, JavaScript, 前端工具资源"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta content="codeva-omByo1T2Oa" name="baidu-site-verification"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- Global site tag (gtag.js) - Google Analytics --><script src="https://www.googletagmanager.com/gtag/js?id=G-8T3DP764SR"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-8T3DP764SR');</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">黑胖子的博客</a></h3><div class="description"><p>The sun is the nihility in your delusion eyes.</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/yangyichen"><i class="fa fa-github"></i></a></li><li><a target="_blank" rel="noopener" href="http://instagram.com/nihility__"><i class="fa fa-instagram"></i></a></li><li><a href="/atom.xml"><i class="fa fa-rss"></i></a></li></ul><div class="footer"><a target="_blank" href="javascript:;"><span>Theme by</span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai</a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li><li><a href="/tags/weekly">周报</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" class="fa fa-chevron-left"></a></li></div><div class="avatar"><img src="https://img1.doubanio.com/icon/ul50179052-8.jpg"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>chrome cookie限制</a></h3></div><div class="post-content"><h1 id="chrome-cookie-限制"><a href="#chrome-cookie-限制" class="headerlink" title="chrome cookie 限制"></a>chrome cookie 限制</h1><h2 id="Strict"><a href="#Strict" class="headerlink" title="Strict"></a>Strict</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="title class_">Set</span>-<span class="title class_">Cookie</span>: <span class="title class_">CookieName</span>=<span class="title class_">CookieValue</span>; <span class="title class_">SameSite</span>=<span class="title class_">Strict</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="Lax"><a href="#Lax" class="headerlink" title="Lax"></a>Lax</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="title class_">Set</span>-<span class="title class_">Cookie</span>: <span class="title class_">CookieName</span>=<span class="title class_">CookieValue</span>; <span class="title class_">SameSite</span>=<span class="title class_">Lax</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">请求类型</th>
+<th style="text-align:center">示例</th>
+<th style="text-align:center">正常情况</th>
+<th style="text-align:center">Lax</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">链接</td>
+<td style="text-align:center"><a href="..."></a></td>
+<td style="text-align:center">发送 Cookie</td>
+<td style="text-align:center">发送 Cookie</td>
+</tr>
+<tr>
+<td style="text-align:center">预加载</td>
+<td style="text-align:center"><link rel="prerender" href="..."/></td>
+<td style="text-align:center">发送 Cookie</td>
+<td style="text-align:center">发送 Cookie</td>
+</tr>
+<tr>
+<td style="text-align:center">GET</td>
+<td style="text-align:center">表单 <form method="GET" action="..."></td>
+<td style="text-align:center">发送 Cookie</td>
+<td style="text-align:center">发送 Cookie</td>
+</tr>
+<tr>
+<td style="text-align:center">POST</td>
+<td style="text-align:center">表单 <form method="POST" action="..."></td>
+<td style="text-align:center">发送 Cookie</td>
+<td style="text-align:center">不发送</td>
+</tr>
+<tr>
+<td style="text-align:center">iframe</td>
+<td style="text-align:center"><iframe src="..."></iframe></td>
+<td style="text-align:center">发送 Cookie</td>
+<td style="text-align:center">不发送</td>
+</tr>
+<tr>
+<td style="text-align:center">AJAX</td>
+<td style="text-align:center">\$.get(“…”)</td>
+<td style="text-align:center">发送 Cookie</td>
+<td style="text-align:center">不发送</td>
+</tr>
+<tr>
+<td style="text-align:center">Image</td>
+<td style="text-align:center"><img src="..."></td>
+<td style="text-align:center">发送 Cookie</td>
+<td style="text-align:center">不发送</td>
+</tr>
+</tbody>
+</table>
+<h2 id="None"><a href="#None" class="headerlink" title="None"></a>None</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="title class_">Set</span>-<span class="title class_">Cookie</span>: widget_session=abc123; <span class="title class_">SameSite</span>=<span class="title class_">None</span>; <span class="title class_">Secure</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2020-08-10</span><i class="fa fa-comment-o"></i><a href="/2020/08/10/chrome%20cookie%E9%99%90%E5%88%B6/#comments">评论</a><i class="fa fa-tag"></i><a href="/tags/技术/" title="技术" class="tag">技术 </a></div></div></div></div><div class="share"><div class="evernote"><a href="javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document.title);}})();" ref="nofollow" target="_blank" class="fa fa-bookmark"></a></div><div class="weibo"><a href="javascript:void((function(s,d,e){try{}catch(e){}var f='http://service.weibo.com/share/share.php?',u=d.location.href,p=['url=',e(u),'&amp;title=',e(d.title),'&amp;appkey=2924220432'].join('');function a(){if(!window.open([f,p].join(''),'mb',['toolbar=0,status=0,resizable=1,width=620,height=450,left=',(s.width-620)/2,',top=',(s.height-450)/2].join('')))u.href=[f,p].join('');};if(/Firefox/.test(navigator.userAgent)){setTimeout(a,0)}else{a()}})(screen,document,encodeURIComponent));" class="fa fa-weibo"></a></div><div class="twitter"><a target="_blank" rel="noopener" href="http://twitter.com/home?status=,https://cary.im/2020/08/10/chrome cookie限制/,黑胖子的博客,chrome cookie限制,;" class="fa fa-twitter"></a></div></div><div class="pagination"><ul class="clearfix"><li class="pre pagbuttons"><a role="navigation" href="/2020/08/24/TCP%E5%92%8CUPD%E7%9A%84%E5%8C%BA%E5%88%AB/" title="TCP和UPD的区别" class="btn">上一篇</a></li><li class="next pagbuttons"><a role="navigation" href="/2020/03/24/axios%E5%8E%9F%E7%90%86/" title="axios原理" class="btn">下一篇</a></li></ul></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'heipangzi';
+var disqus_identifier = '2020/08/10/chrome cookie限制/';
+var disqus_title = 'chrome cookie限制';
+var disqus_url = 'https://cary.im/2020/08/10/chrome cookie限制/';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//heipangzi.disqus.com/count.js" async></script></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>

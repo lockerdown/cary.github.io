@@ -1,0 +1,75 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="author" content="Cary Yang,carynihility@gmail.com"><title>周报 · 黑胖子的博客</title><meta name="description" content="当前推进中的任务进度描述及里程碑排期
+
+
+任务名称
+进度
+
+
+
+
+h5三站合一
+测试中
+
+
+
+跨部门沟通中出现的问题暂无
+需求质量问题暂无
+本周技术难点及收获熟悉了一下express流程,加了解析静态资源文件夹地址对webpack中path,publicPath,filename,chunkFile"><meta name="keywords" content="Angular, Babel, CLI, CSS-in-JS, Gatsby, GraphQL, JavaScript, React, TypeScript, WebAssembly, github, npm, vue, webpack, 服务端渲染, JavaScript, 前端工具资源"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta content="codeva-omByo1T2Oa" name="baidu-site-verification"><meta name="renderer" content="webkit"><link rel="short icon" href="/images/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/css/style.css"><link rel="stylesheet" href="/css/blog_basic.css"><link rel="stylesheet" href="/css/font-awesome.min.css"><link rel="alternate" type="application/atom+xml" title="ATOM 1.0" href="/atom.xml"><!-- Global site tag (gtag.js) - Google Analytics --><script src="https://www.googletagmanager.com/gtag/js?id=G-8T3DP764SR"></script><script type="text/javascript">window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-8T3DP764SR');</script><meta name="generator" content="Hexo 6.3.0"></head><body><div class="sidebar animated fadeInDown"><div class="logo-title"><div class="title"><img src="/images/logo@2x.png" style="width:127px;"><h3 title=""><a href="/">黑胖子的博客</a></h3><div class="description"><p>The sun is the nihility in your delusion eyes.</p></div></div></div><ul class="social-links"><li><a target="_blank" rel="noopener" href="https://github.com/yangyichen"><i class="fa fa-github"></i></a></li><li><a target="_blank" rel="noopener" href="http://instagram.com/nihility__"><i class="fa fa-instagram"></i></a></li><li><a href="/atom.xml"><i class="fa fa-rss"></i></a></li></ul><div class="footer"><a target="_blank" href="javascript:;"><span>Theme by</span></a><a target="_blank" rel="noopener" href="https://www.caicai.me"> CaiCai</a><span>&</span><a target="_blank" rel="noopener" href="https://github.com/Ben02/hexo-theme-Anatole"> Ben</a><div class="by_farbox"><a href="https://hexo.io/zh-cn/" target="_blank">Proudly published with Hexo&#65281;</a></div></div></div><div class="main"><div class="page-top animated fadeInDown"><div class="nav"><li><a href="/">首页</a></li><li><a href="/archives">归档</a></li><li><a href="/about">关于</a></li><li><a href="/tags/weekly">周报</a></li></div><div class="information"><div class="back_btn"><li><a onclick="window.history.go(-1)" style="display:none;" class="fa fa-chevron-left"></a></li></div><div class="avatar"><img src="https://img1.doubanio.com/icon/ul50179052-8.jpg"></div></div></div><div class="autopagerize_page_element"><div class="content"><div class="post-page"><div class="post animated fadeInDown"><div class="post-title"><h3><a>周报</a></h3></div><div class="post-content"><h3 id="当前推进中的任务进度描述及里程碑排期"><a href="#当前推进中的任务进度描述及里程碑排期" class="headerlink" title="当前推进中的任务进度描述及里程碑排期"></a>当前推进中的任务进度描述及里程碑排期</h3><table>
+<thead>
+<tr>
+<th>任务名称</th>
+<th>进度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>h5三站合一</td>
+<td>测试中</td>
+</tr>
+</tbody>
+</table>
+<h3 id="跨部门沟通中出现的问题"><a href="#跨部门沟通中出现的问题" class="headerlink" title="跨部门沟通中出现的问题"></a>跨部门沟通中出现的问题</h3><p>暂无</p>
+<h3 id="需求质量问题"><a href="#需求质量问题" class="headerlink" title="需求质量问题"></a>需求质量问题</h3><p>暂无</p>
+<h3 id="本周技术难点及收获"><a href="#本周技术难点及收获" class="headerlink" title="本周技术难点及收获"></a>本周技术难点及收获</h3><p>熟悉了一下express流程,加了解析静态资源文件夹地址<br>对webpack中path,publicPath,filename,chunkFilename有了更深的理解</p>
+<p>假设我们当前需要编译一个文件到<code>aa/bb</code>,但是服务器配置一个二级域名,导致我们的资源目录映射到了<code>xx/aa/bb</code></p>
+<p>根据webpack的hooks规则,每个模块最后会有一个写入的过程,在这个过程中便会拿取用户设置的path与publicPath,所以最后的路径为:</p>
+<p>文件编译路径: <code>path+filename</code></p>
+<p>HtmlWebpackPlugin注入路径为: <code>publicPath+path+filename</code></p>
+<p>以下为output常用属性</p>
+<ul>
+<li>path <ul>
+<li>定义了文件输出路径。</li>
+</ul>
+</li>
+<li>publicPath<ul>
+<li>定义一个外部资源的路径,该路径不会被当做文件路径，而是在。此选项的值都会以 <strong>/</strong> 结束</li>
+</ul>
+</li>
+<li>filename<ul>
+<li>此选项决定了每个输出 bundle 的名称。<strong>必需</strong>为相对路径</li>
+</ul>
+</li>
+<li>chunkFilename<ul>
+<li>此选项决定了非入口(non-entry) chunk 文件的名称。做异步加载的时候会用到,</li>
+</ul>
+</li>
+</ul>
+<h3 id="本周过程性资产"><a href="#本周过程性资产" class="headerlink" title="本周过程性资产"></a>本周过程性资产</h3><p>迁移了ui组件库到猎鹰工作台</p>
+<h3 id="对团队的建议"><a href="#对团队的建议" class="headerlink" title="对团队的建议"></a>对团队的建议</h3><p>暂无</p>
+<h3 id="近期的规划"><a href="#近期的规划" class="headerlink" title="近期的规划"></a>近期的规划</h3><p>优化一下幻视,包括一键复制,一键展开,收起当前接口</p>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><p>修复了一些线上问题</p>
+<p>优化了一下ui组件的滚动效果.</p>
+<p>本周在网上冲浪的时候看到一个不错的项目<a target="_blank" rel="noopener" href="https://umijs.org/zh/guide/">UmiJS</a>,和vue ui差不多类型的一键编译,安装依赖,项目管理的.我在想我们是不是需要搞一个类似的也可以<strong>一键安装,一键编译,一键发布</strong>的系统?至少目前我觉得现在发布这块流程是可以优化的,未来再也不需要打开cmd输入命令,一切都是通过鼠标点击完成的.</p>
+</div><div class="post-footer"><div class="meta"><div class="info"><i class="fa fa-sun-o"></i><span class="date">2019-12-11</span><i class="fa fa-comment-o"></i><a href="/archived/2019-12-11weekly.html#comments">评论</a><i class="fa fa-tag"></i></div></div></div></div><a id="comments"></a><div id="disqus_thread"></div><script>var disqus_shortname = 'heipangzi';
+var disqus_identifier = 'archived/2019-12-11weekly.html';
+var disqus_title = '周报';
+var disqus_url = 'https://cary.im/archived/2019-12-11weekly.html';
+(function() {
+    var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+})();</script><script id="dsq-count-scr" src="//heipangzi.disqus.com/count.js" async></script></div></div></div></div><script src="/js/jquery.js"></script><script src="/js/jquery-migrate-1.2.1.min.js"></script><script src="/js/jquery.appear.js"></script></body></html>
