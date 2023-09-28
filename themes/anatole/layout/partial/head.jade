@@ -2,8 +2,8 @@ meta(charset="utf-8")
 meta(name="X-UA-Compatible" content="IE=edge")
 meta(name="author", content= theme.author)
 meta(property="og:type", content="website")
-meta(property="og:title", content=config.title)
-meta(property="og:description", content=config.description)
+meta(property="og:title", content=page.title)
+meta(property="og:description", content=page.desc)
 meta(property="og:image", content="/images/favicon.ico")
 
 title
@@ -11,7 +11,8 @@ title
         = config.title
 block description
     meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')
-    meta(property="og:description", content=config.description)
+    
+meta(property="og:description", content=config.description)
 
 if page.keywords
     meta(name="keywords", content= page.keywords)
