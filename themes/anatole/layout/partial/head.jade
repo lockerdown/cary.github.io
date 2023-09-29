@@ -7,13 +7,11 @@ meta(property="og:image", content="/images/favicon.ico")
 title
     block site_title
         = config.title
-    meta(property="og:title", content=site_title)
 
 block description
     meta(name="description", content= config.description ? config.description : 'A Blog Powered By Hexo')
-    meta(property="og:description", content=description)
 
-
+meta(property="og:description", content=description)
 
 if page.keywords
     meta(name="keywords", content= page.keywords)
