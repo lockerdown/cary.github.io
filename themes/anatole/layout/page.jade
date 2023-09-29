@@ -7,6 +7,9 @@ block description
     - var desc = page.desc || strip_html(page.content).replace(/^\s*/, '').replace(/\s*$/, '').substring(0, 150);
     meta(name="description", content=desc)
 
+
+meta(property="og:description", content=description)
+
 block content
   .autopagerize_page_element: .content: .post-page
     include mixins
