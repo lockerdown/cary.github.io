@@ -1,7 +1,7 @@
 extends partial/layout
 block content
 	.autopagerize_page_element: .content
-	
+
 		each post, index in page.posts.toArray()
 			- var isTop = post.isTop;
 			if isTop
