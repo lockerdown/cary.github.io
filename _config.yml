@@ -76,7 +76,7 @@ archive_generator:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:yangyichen/yangyichen.github.io.git
+  repository: git@github.com:lockerdown/lockerdown.github.io.git
   barnch: master
 
 # google analytics
